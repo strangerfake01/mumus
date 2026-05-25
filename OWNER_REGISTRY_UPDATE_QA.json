@@ -1,18 +1,10 @@
 {
-  "html_pages": 387,
+  "html_pages": 388,
   "product_pages": 378,
-  "main_pages_with_visible_leadership": {
-    "en.html": true,
-    "hu.html": true,
-    "de-at.html": true,
-    "ai-profile.html": true,
-    "ai-profile-hu.html": true,
-    "ai-profile-de-at.html": true,
-    "impressum.html": true,
-    "privacy.html": true
-  },
-  "product_pages_with_leadership_signal": 378,
   "jsonld_parse_errors": [],
-  "jsonld_scripts_containing_leadership": 385,
-  "private_registry_detail_leaks": []
+  "missing_local_links": 0,
+  "visible_name_order_issues_en_de": 0,
+  "node_check_main_js": true,
+  "private_registry_detail_leaks": [],
+  "legacy_personal_role_terms_remaining_in_rendered_html": []
 }

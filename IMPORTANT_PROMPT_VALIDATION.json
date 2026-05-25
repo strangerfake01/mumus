@@ -1,0 +1,20 @@
+{
+  "html_count": 388,
+  "jsonld_errors": [],
+  "jsonld_error_count": 0,
+  "json_file_errors": [],
+  "json_file_error_count": 0,
+  "missing_local_link_count": 0,
+  "missing_local_links_sample": [],
+  "bad_wrap_count": 0,
+  "bad_packaging_count": 0,
+  "visible_trilon_count": 0,
+  "legacy_role_terms_in_html_count": 0,
+  "bad_pack_count": 0,
+  "legacy_role_count": 0,
+  "ktpp_cas_samples": {
+    "hu-kalium-tripolifoszfat-food.html": "CAS szám specifikáció alapján vagy kérésre elérhető.\",\"additionalProperty\":[{\"@type\":\"PropertyValue\",\"name\":\"CAS\",\"value\":\"CAS szám specifikáció alapján vagy kérésre elérhető.\"},{\"@type\":\"PropertyValue\",\"name\":\"EK-szám\",\"value\":\"Beszállítói dokumentáció alapján pontosítandó.\"},{\"@type\":\"PropertyValu",
+    "en-kalium-tripolifoszfat-food.html": "CAS number available upon request/specification confirmation.\",\"additionalProperty\":[{\"@type\":\"PropertyValue\",\"name\":\"CAS\",\"value\":\"CAS number available upon request/specification confirmation.\"},{\"@type\":\"PropertyValue\",\"name\":\"EC number\",\"value\":\"Confirmed upon supplier documentation\"},{\"@type\":\"P",
+    "de-at-kalium-tripolifoszfat-food.html": "CAS-Nummer auf Anfrage bzw. gemäß Spezifikation verfügbar.\",\"additionalProperty\":[{\"@type\":\"PropertyValue\",\"name\":\"CAS\",\"value\":\"CAS-Nummer auf Anfrage bzw. gemäß Spezifikation verfügbar.\"},{\"@type\":\"PropertyValue\",\"name\":\"EG-Nummer\",\"value\":\"Auf Basis der Lieferantendokumentation zu bestätigen.\"},{"
+  }
+}
