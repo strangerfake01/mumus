@@ -1,0 +1,24 @@
+{
+  "asset_exists": {
+    "cert-iso-9001-en.jpeg": true,
+    "cert-iso-9001-hu.jpeg": true,
+    "cert-gmp-plus-2020.pdf": true,
+    "cert-gmp-plus-2020-preview.jpg": true
+  },
+  "main_pages_with_certificate_evidence": {
+    "en.html": true,
+    "hu.html": true,
+    "de-at.html": true
+  },
+  "de_uses_english_iso": true,
+  "hu_uses_hungarian_iso": true,
+  "en_uses_english_iso": true,
+  "product_pages": 378,
+  "product_pages_with_certificate_link": 378,
+  "json_ld_parse_errors": [],
+  "json_ld_parse_error_count": 0,
+  "missing_internal_links_count": 0,
+  "missing_internal_links_sample": [],
+  "main_js_syntax_ok": true,
+  "main_js_stderr": ""
+}
