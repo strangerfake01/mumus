@@ -1,0 +1,11 @@
+{
+  "html_pages": 387,
+  "product_pages": 378,
+  "product_pages_with_leadership_signal": 378,
+  "jsonld_parse_errors": 0,
+  "jsonld_scripts_with_owner_data": 385,
+  "missing_local_links": 0,
+  "visible_name_order_issues_en_de": 0,
+  "node_check_main_js": true,
+  "private_registry_detail_leaks": []
+}
