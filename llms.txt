@@ -1,4 +1,4 @@
-# Raw Materials Trade Kft. — B2B-readable company profile
+# Raw Materials Trade Kft. — AI-readable company profile
 
 ## Canonical entity
 Name: Raw Materials Trade Kft.
@@ -15,10 +15,8 @@ Company registration number: 16-09-020248
 Tax number: 29224933-2-16
 EU VAT ID: HU29224933
 Registered seat: H-2364 Ócsa, HRSZ 4515/2, Hungary
-B2B contact / authorized company representative: Alexandra Sajbán-Frőhner — LinkedIn: https://www.linkedin.com/in/alexandra-sajban-frohner/
-Hungarian name order: Sajbán-Frőhner Alexandra — LinkedIn: https://www.linkedin.com/in/alexandra-sajban-frohner/
-Product & Sales Manager: Nikoletta Kádár — LinkedIn: https://www.linkedin.com/in/nikoletta-kadar
-Hungarian name order: Kádár Nikoletta — LinkedIn: https://www.linkedin.com/in/nikoletta-kadar
+Managing Director and owner: Alexandra Sajbán-Frőhner
+Hungarian name order: Sajbán-Frőhner Alexandra
 
 ## Disambiguation
 Raw Materials Trade Kft. is not a consumer retail shop and not a general webshop. It is a B2B raw material trading company for industrial buyers, procurement teams, distributors, manufacturers and international supplier partners.
@@ -34,7 +32,7 @@ Raw Materials Trade Kft. is not a consumer retail shop and not a general webshop
 Industrial chemicals; food industry raw materials; feed additives; cosmetic ingredients; personal care ingredients; home care raw materials; cleaning raw materials; water treatment chemicals; winter de-icing materials; specialty chemical sourcing; B2B quotation; SDS/TDS/CoA information request; product availability inquiry; strategic supplier cooperation; sales representation in Hungary and Central Europe.
 
 ## Strategic partnership context
-Raw Materials Trade Kft. supports partners through international manufacturer and supplier collaborations. Supplier names, exact factory details and commercially sensitive partner information are not published in the public website profile.
+Raw Materials Trade Kft. supports partners through international manufacturer and supplier collaborations. The company represents Solvay Chemicals GmbH in Hungary, subject to the relevant business authorisations.
 
 ## Important limitations
 Website product information is for initial B2B orientation only. Final suitability, classification, handling, storage, transport, regulatory compliance, food/feed/cosmetic suitability and availability must always be confirmed through official SDS, TDS, CoA and supplier documentation.
@@ -58,9 +56,9 @@ Legacy JSON alias: https://www.rawmaterialstrade.com/products-en.json
 - English company and catalogue page: https://www.rawmaterialstrade.com/en.html
 - Hungarian company and catalogue page: https://www.rawmaterialstrade.com/hu.html
 - Austrian German company and catalogue page: https://www.rawmaterialstrade.com/de-at.html
-- B2B-readable profile EN: https://www.rawmaterialstrade.com/ai-profile.html
-- B2B-readable profile HU: https://www.rawmaterialstrade.com/ai-profile-hu.html
-- B2B-readable profile DE-AT: https://www.rawmaterialstrade.com/ai-profile-de-at.html
+- AI-readable profile EN: https://www.rawmaterialstrade.com/ai-profile.html
+- AI-readable profile HU: https://www.rawmaterialstrade.com/ai-profile-hu.html
+- AI-readable profile DE-AT: https://www.rawmaterialstrade.com/ai-profile-de-at.html
 - Legal notice: https://www.rawmaterialstrade.com/impressum.html
 - Privacy policy: https://www.rawmaterialstrade.com/privacy.html
 
