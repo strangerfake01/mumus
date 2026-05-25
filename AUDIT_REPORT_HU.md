@@ -40,7 +40,7 @@ Az oldal alapja erős: többnyelvű, termékszintű, strukturált, B2B-orientál
 
 - 388 HTML fájl JSON-LD hibamentesen parse-olható.
 - Használt típusok: `Organization`, `WebSite`, `WebPage`, `Product`, `Service`, `BreadcrumbList`, `FAQPage`, `Offer`, `ContactPoint`, `PrivacyPolicy`, `EducationalOccupationalCredential`.
-- A céges entitás egységes: Raw Materials Trade Kft.; jogi név; cégjegyzékszám; EU VAT ID; székhely; office@rawmaterialstrade.com; Sajbán-Frőhner Alexandra / Alexandra Sajbán-Frőhner.
+- A céges entitás egységes: Raw Materials Trade Kft.; jogi név; cégjegyzékszám; EU VAT ID; székhely; office@rawmaterialstrade.com; Sajbán-Frőhner Alexandra / Alexandra Sajbán-Frőhner — LinkedIn: https://www.linkedin.com/in/alexandra-sajban-frohner/.
 - A német és magyar structured data nyelvi keveredése javítva.
 
 ### GDPR / adatvédelem
