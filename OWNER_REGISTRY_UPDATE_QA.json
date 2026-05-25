@@ -1,0 +1,18 @@
+{
+  "html_pages": 387,
+  "product_pages": 378,
+  "main_pages_with_visible_leadership": {
+    "en.html": true,
+    "hu.html": true,
+    "de-at.html": true,
+    "ai-profile.html": true,
+    "ai-profile-hu.html": true,
+    "ai-profile-de-at.html": true,
+    "impressum.html": true,
+    "privacy.html": true
+  },
+  "product_pages_with_leadership_signal": 378,
+  "jsonld_parse_errors": [],
+  "jsonld_scripts_containing_leadership": 385,
+  "private_registry_detail_leaks": []
+}
