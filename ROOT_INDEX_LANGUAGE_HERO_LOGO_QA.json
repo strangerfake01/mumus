@@ -1,0 +1,34 @@
+{
+  "index.html": {
+    "hero_brand_mark": 1,
+    "lang_switcher": 1,
+    "rmtLangSelected": 4,
+    "canonical_root": true,
+    "en_alt_root": true,
+    "xdefault_root": true
+  },
+  "en.html": {
+    "hero_brand_mark": 1,
+    "lang_switcher": 1,
+    "rmtLangSelected": 3,
+    "canonical_root": true,
+    "en_alt_root": true,
+    "xdefault_root": true
+  },
+  "hu.html": {
+    "hero_brand_mark": 1,
+    "lang_switcher": 1,
+    "rmtLangSelected": 3,
+    "canonical_root": false,
+    "en_alt_root": true,
+    "xdefault_root": true
+  },
+  "de-at.html": {
+    "hero_brand_mark": 1,
+    "lang_switcher": 1,
+    "rmtLangSelected": 3,
+    "canonical_root": false,
+    "en_alt_root": true,
+    "xdefault_root": true
+  }
+}
