@@ -153,7 +153,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "0–3 mm, 3–8 mm",
       "grade": "0–3 mm, 3–8 mm",
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution)",
       "synonyms_en": [
         "Aluminium Sulphate — 0–3 mm, 3–8 mm",
         "Alumínium-szulfát 0–3 mm, 3–8 mm",
@@ -182,7 +182,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -253,7 +253,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "oldat",
       "grade": "oldat",
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution)",
       "synonyms_en": [
         "Aluminium Sulphate — solution",
         "Alumínium-szulfát solution",
@@ -282,7 +282,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -453,7 +453,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Ammonium Chloride",
         "Ammónium-klorid",
@@ -482,7 +482,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -651,7 +651,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Ammonium Sulphate",
         "Ammónium-szulfát",
@@ -680,7 +680,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -751,7 +751,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Food grade",
       "grade": "Food grade",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Ascorbic Acid (Vitamin C)",
         "Aszkorbinsav",
@@ -780,7 +780,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -1241,7 +1241,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "(L+)",
       "grade": "(L+)",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Tartaric Acid — L+",
         "Borkősav (L+)",
@@ -1270,7 +1270,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -1341,7 +1341,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Boric Acid",
         "Bórsav",
@@ -1370,7 +1370,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -1835,7 +1835,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Anhydrous",
       "grade": "Anhydrous",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Zinc Chloride",
         "Cink-klorid",
@@ -1864,7 +1864,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -1935,7 +1935,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "vízmentes",
       "grade": "vízmentes",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Zinc Chloride — anhydrous",
         "Cink-klorid anhydrous",
@@ -1964,7 +1964,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -2045,7 +2045,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical; feed grade; pharmaceutical grade",
       "grade": "Technical; feed grade; pharmaceutical grade",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Zinc Oxide",
         "Cink-oxid",
@@ -2074,7 +2074,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -2145,7 +2145,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "monohidrát",
       "grade": "monohidrát",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Zinc Sulphate — monohydrate",
         "Cink-szulfát monohydrate",
@@ -2174,7 +2174,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -2245,7 +2245,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "monohidrát, heptahidrát",
       "grade": "monohidrát, heptahidrát",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Zinc Sulphate — monohydrate, heptahydrate",
         "Cink-szulfát monohydrate, heptahydrate",
@@ -2274,7 +2274,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -2345,7 +2345,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "monohidrát, anhidrát",
       "grade": "monohidrát, anhidrát",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Citric Acid — monohydrate, anhydrous",
         "Citromsav monohydrate, anhydrous",
@@ -2374,7 +2374,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -3537,7 +3537,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Road salt; vacuum salt; tablet salt",
       "grade": "Road salt; vacuum salt; tablet salt",
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "synonyms_en": [
         "Road Salt (Sodium Chloride)",
         "Étkezési só",
@@ -3566,7 +3566,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -4057,7 +4057,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Feed grade; food grade",
       "grade": "Feed grade; food grade",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Glycine",
         "Glicin",
@@ -4086,7 +4086,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -4753,7 +4753,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "20–25% oldat",
       "grade": "20–25% oldat",
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "synonyms_en": [
         "Calcium Chloride — 20–25% solution",
         "Kalcium-klorid 20–25% solution",
@@ -4782,7 +4782,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -4855,7 +4855,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "77–80%",
       "grade": "77–80%",
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "synonyms_en": [
         "Calcium Chloride — 77–80%",
         "Kalcium-klorid 77–80%",
@@ -4884,7 +4884,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -4957,7 +4957,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "dihidrát 78–80% pikkelyes",
       "grade": "dihidrát 78–80% pikkelyes",
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "synonyms_en": [
         "Calcium Chloride — dihydrate 78–80% flakes",
         "Kalcium-klorid dihydrate 78–80% flakes",
@@ -4986,7 +4986,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg), IBC (solution), tanker (solution)",
+      "packaging": "Big bagged, bagged, IBC (solution), tanker (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -5057,7 +5057,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Food grade (E536)",
       "grade": "Food grade (E536)",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Potassium Ferrocyanide",
         "Kálium-ferrocianid",
@@ -5086,7 +5086,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -5159,7 +5159,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "oldat 21%, 45%, 48–50%",
       "grade": "oldat 21%, 45%, 48–50%",
-      "packaging": "Bags (25 kg), big bags (flakes); IBC (solution)",
+      "packaging": "bagged, BigBag; IBC (solution)",
       "synonyms_en": [
         "Potassium Hydroxide — solution 21%, 45%, 48–50%",
         "Kálium-hidroxid solution 21%, 45%, 48–50%",
@@ -5188,7 +5188,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags (flakes); IBC (solution)",
+      "packaging": "bagged, BigBag; IBC (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -5261,7 +5261,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "pikkelyes",
       "grade": "pikkelyes",
-      "packaging": "Bags (25 kg), big bags (flakes); IBC (solution)",
+      "packaging": "bagged, BigBag; IBC (solution)",
       "synonyms_en": [
         "Potassium Hydroxide — flakes",
         "Kálium-hidroxid flakes",
@@ -5290,7 +5290,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags (flakes); IBC (solution)",
+      "packaging": "bagged, BigBag; IBC (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -5749,7 +5749,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "ipari, kezeletlen",
       "grade": "ipari, kezeletlen",
-      "packaging": "Big bags (1000 kg), bags (25 kg); IBC (solution)",
+      "packaging": "Big bagged, bagged; IBC (solution)",
       "synonyms_en": [
         "Urea — industrial, untreated",
         "Karbamid industrial, untreated",
@@ -5778,7 +5778,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg); IBC (solution)",
+      "packaging": "Big bagged, bagged; IBC (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6351,7 +6351,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Flakes (47–50% MgCl₂)",
       "grade": "Flakes (47–50% MgCl₂)",
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "synonyms_en": [
         "Magnesium Chloride Hexahydrate",
         "Magnézium-klorid",
@@ -6380,7 +6380,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6457,7 +6457,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "hexahidrát",
       "grade": "hexahidrát",
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "synonyms_en": [
         "Magnesium Chloride Hexahydrate",
         "Magnézium-klorid hexahidrát",
@@ -6486,7 +6486,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6655,7 +6655,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Heavy grade; feed grade",
       "grade": "Heavy grade; feed grade",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Magnesium Oxide",
         "Magnézium-oxid",
@@ -6684,7 +6684,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6755,7 +6755,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "nehéz",
       "grade": "nehéz",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Magnesium Oxide — dense",
         "Magnézium-oxid heavy",
@@ -6784,7 +6784,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6865,7 +6865,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Anhydrous; heptahydrate (Epsom salt); monohydrate",
       "grade": "Anhydrous; heptahydrate (Epsom salt); monohydrate",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Magnesium Sulphate",
         "Magnézium-szulfát",
@@ -6894,7 +6894,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -6965,7 +6965,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Maleic Acid",
         "Maleinsav",
@@ -6994,7 +6994,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -8743,7 +8743,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "gran.",
       "grade": "gran.",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Sodium Benzoate — granular",
         "Nátrium-benzoát gran.",
@@ -8772,7 +8772,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -8845,7 +8845,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Food grade; technical",
       "grade": "Food grade; technical",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Bicarbonate",
         "Nátrium-hidrogén-karbonát",
@@ -8874,7 +8874,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -8947,7 +8947,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "(szódabikarbóna)",
       "grade": "(szódabikarbóna)",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Bicarbonate — baking soda",
         "Nátrium-hidrogén-karbonát (baking soda)",
@@ -8976,7 +8976,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9049,7 +9049,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "pikkelyes",
       "grade": "pikkelyes",
-      "packaging": "Bags (25 kg), big bags (solid); IBC, tanker (solution)",
+      "packaging": "bagged, BigBag; IBC, tanker (solution)",
       "synonyms_en": [
         "Sodium Hydroxide (Caustic Soda) — flakes",
         "Nátrium-hidroxid mikrogyöngy, flakes",
@@ -9078,7 +9078,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags (solid); IBC, tanker (solution)",
+      "packaging": "bagged, BigBag; IBC, tanker (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9151,7 +9151,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "oldat 48–50%",
       "grade": "oldat 48–50%",
-      "packaging": "Bags (25 kg), big bags (solid); IBC, tanker (solution)",
+      "packaging": "bagged, BigBag; IBC, tanker (solution)",
       "synonyms_en": [
         "Sodium Hydroxide (Caustic Soda) — solution 48–50%",
         "Nátrium-hidroxid solution 48–50%",
@@ -9180,7 +9180,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags (solid); IBC, tanker (solution)",
+      "packaging": "bagged, BigBag; IBC, tanker (solution)",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9353,7 +9353,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "könnyű",
       "grade": "könnyű",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Carbonate — light",
         "Nátrium-karbonát light",
@@ -9382,7 +9382,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9455,7 +9455,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "nehéz",
       "grade": "nehéz",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Carbonate — dense",
         "Nátrium-karbonát heavy",
@@ -9484,7 +9484,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9557,7 +9557,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "(nátrium-piroszulfit)",
       "grade": "(nátrium-piroszulfit)",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Sodium Metabisulphite — sodium pyrosulfite",
         "Nátrium-metabiszulfit (sodium pyrosulfite)",
@@ -9586,7 +9586,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9657,7 +9657,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Anhydrous; pentahydrate",
       "grade": "Anhydrous; pentahydrate",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Metasilicate",
         "Nátrium-metaszilikát",
@@ -9686,7 +9686,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9759,7 +9759,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical; feed grade",
       "grade": "Technical; feed grade",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Sodium Molybdate",
         "Nátrium-molibdát",
@@ -9788,7 +9788,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -9859,7 +9859,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Percarbonate",
         "Nátrium-perkarbonát",
@@ -9888,7 +9888,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -10251,7 +10251,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Anhydrous (salt cake)",
       "grade": "Anhydrous (salt cake)",
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "synonyms_en": [
         "Sodium Sulphate",
         "Nátrium-szulfát",
@@ -10280,7 +10280,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bags (25 kg)",
+      "packaging": "Big bagged, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -10355,7 +10355,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical; food grade",
       "grade": "Technical; food grade",
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "synonyms_en": [
         "Sodium Tripolyphosphate (STPP)",
         "Nátrium-tripolifoszfát",
@@ -10384,7 +10384,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg), big bags",
+      "packaging": "bagged, BigBag",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -11249,7 +11249,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Road salt; vacuum salt; tablet salt",
       "grade": "Road salt; vacuum salt; tablet salt",
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "synonyms_en": [
         "Road Salt (Sodium Chloride)",
         "Sótabletta",
@@ -11278,7 +11278,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -11349,7 +11349,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Technical",
       "grade": "Technical",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Thiourea",
         "Tiokarbamid",
@@ -11378,7 +11378,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -11501,10 +11501,10 @@
     "id": "trilon-industrial",
     "source_index": 116,
     "name_en": "EDTA",
-    "name_hu": "Trilon",
+    "name_hu": "EDTA / EDTA Na₂–Na₄",
     "name_de": "Ethylendiamintetraessigsäure",
     "sub_en": "EDTA",
-    "sub_hu": "Trilon",
+    "sub_hu": "EDTA / EDTA Na₂–Na₄",
     "sub_de": "Ethylendiamintetraessigsäure",
     "category_ids": [
       "industrial"
@@ -11520,10 +11520,10 @@
     ],
     "primary_category": "industrial",
     "short_description_en": "EDTA is a B2B raw material listed in the Industrial Chemicals portfolio. Final suitability, grade, concentration and documentation are confirmed individually for each inquiry.",
-    "short_description_hu": "Trilon — Trilon néven gyakran EDTA-alapú komplexképzőket jelölnek. A konkrét minőség, koncentráció és dokumentáció B2B ajánlatkérés során kerül megerősítésre.",
+    "short_description_hu": "EDTA — EDTA néven gyakran EDTA-alapú komplexképzőket jelölnek. A konkrét minőség, koncentráció és dokumentáció B2B ajánlatkérés során kerül megerősítésre.",
     "short_description_de": "Ethylendiamintetraessigsäure ist ein B2B-Rohstoff im Bereich Industriechemikalien. Endgültige Eignung, Qualität, Konzentration und Dokumentation werden je Anfrage individuell bestätigt.",
     "what_it_is_en": "EDTA is supplied for professional B2B sourcing conversations. Use, classification, handling, transport and regulatory suitability must always be confirmed through official SDS/TDS/CoA and supplier documentation.",
-    "what_it_is_hu": "A(z) Trilon a Raw Materials Trade Kft. B2B alapanyag-portfóliójának része. A végleges alkalmasságot, besorolást, kezelést, szállítást és szabályozási megfelelést hivatalos SDS/TDS/CoA és beszállítói dokumentáció alapján kell megerősíteni.",
+    "what_it_is_hu": "A(z) EDTA a Raw Materials Trade Kft. B2B alapanyag-portfóliójának része. A végleges alkalmasságot, besorolást, kezelést, szállítást és szabályozási megfelelést hivatalos SDS/TDS/CoA és beszállítói dokumentáció alapján kell megerősíteni.",
     "what_it_is_de": "Ethylendiamintetraessigsäure wird für professionelle B2B-Beschaffungsanfragen geführt. Verwendung, Einstufung, Handhabung, Transport und regulatorische Eignung sind stets anhand offizieller SDS/TDS- und Lieferantendokumentation zu bestätigen.",
     "applications_en": [
       "industrial manufacturing",
@@ -11645,7 +11645,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Food grade dihydrate",
       "grade": "Food grade dihydrate",
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "synonyms_en": [
         "Trisodium Citrate",
         "Trinátrium-citrát",
@@ -11674,7 +11674,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Bags (25 kg)",
+      "packaging": "bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -11843,7 +11843,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Road salt; vacuum salt; tablet salt",
       "grade": "Road salt; vacuum salt; tablet salt",
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "synonyms_en": [
         "Road Salt (Sodium Chloride)",
         "Útszóró só",
@@ -11872,7 +11872,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",
@@ -12039,7 +12039,7 @@
       "form_de": "Auf Basis der Lieferantendokumentation zu bestätigen.",
       "concentration": "Road salt; vacuum salt; tablet salt",
       "grade": "Road salt; vacuum salt; tablet salt",
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "synonyms_en": [
         "Road Salt (Sodium Chloride)",
         "Vákuum só",
@@ -12068,7 +12068,7 @@
       "coa_status_de": "Analysezertifikat nach Hersteller-/Lieferantenverfügbarkeit."
     },
     "procurement": {
-      "packaging": "Big bags (1000 kg), bulk, bags (25 kg)",
+      "packaging": "Big bagged, bulk, bagged",
       "delivery_region": "Hungary, Austria, DACH and Europe",
       "availability_note_en": "Availability, packaging, delivery terms and lead time are confirmed individually for each B2B inquiry.",
       "availability_note_hu": "Az elérhetőség, kiszerelés, szállítási feltételek és határidők minden B2B ajánlatkérésnél egyedileg kerülnek megerősítésre.",

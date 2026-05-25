@@ -1,6 +1,6 @@
 /* Raw Materials Trade Kft. — static, crawlable catalogue enhancement */
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/office@rawmaterialstrade.com';
-function getLang(){const path=window.location.pathname.toLowerCase(); if(path.includes('hu.html')||path.match(/\/hu\//)) return 'hu'; if(path.includes('de-at.html')||path.match(/\/de-at\//)) return 'de-at'; return 'en'}
+function getLang(){const path=window.location.pathname.toLowerCase();const file=path.split('/').pop()||'';if(file==='hu.html'||file.startsWith('hu-')||file==='ai-profile-hu.html'||path.match(/\/hu\//))return'hu';if(file==='de-at.html'||file.startsWith('de-at-')||file==='ai-profile-de-at.html'||path.match(/\/de-at\//))return'de-at';return'en'}
 const FORM_TEXT={
   en:{gdpr:'Please accept the data protection consent.',disc:'Please acknowledge the product documentation disclaimer.',sending:'Sending…',sent:'Thank you — your enquiry has been sent. We will respond within 1–2 business days.',mailto:'Your email client has been opened with a pre-filled message.',fail:'The form could not be sent automatically. Your email client has been opened instead.'},
   hu:{gdpr:'Kérjük, fogadja el az adatkezelési hozzájárulást.',disc:'Kérjük, vegye tudomásul a termékdokumentációs nyilatkozatot.',sending:'Küldés…',sent:'Köszönjük — megkeresése elküldve. 1–2 munkanapon belül válaszolunk.',mailto:'Az e-mail-kliens előre kitöltött üzenettel megnyílt.',fail:'Az űrlapot nem sikerült automatikusan elküldeni. Az e-mail-kliens megnyílt.'},
