@@ -265,7 +265,7 @@ textarea.form-control{min-height:96px;resize:vertical}
 
 footer{background:var(--navy);color:rgba(255,255,255,.65);padding:3rem 0 2rem}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
-.footer-logo{height:36px;width:auto;margin-bottom:.85rem;filter:brightness(0) invert(1);opacity:.92}
+.footer-logo{height:36px;width:auto;margin-bottom:.85rem;filter:brightness(10);opacity:.8}
 .footer-brand p{font-size:.8rem;line-height:1.65;margin:0}
 .footer-col h4{color:#fff;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.85rem}
 .footer-col ul{list-style:none;padding:0}
@@ -486,41 +486,158 @@ a,p,span,strong,small,dd,dt,li,h1,h2,h3,h4,label,.contact-detail,.contact-note,.
 @media (max-width:720px){.identity-list{grid-template-columns:1fr}.company-identity-card{padding:1rem}}
 
 
-/* Targeted client-prompt fixes: prevent vertical letter-by-letter breaks without changing layout design. */
+/* ============================================================
+   2026 strict audit fix — responsive text, contrast, B2B polish
+   ============================================================ */
 html,body{overflow-x:hidden}
 *,*::before,*::after{word-break:normal}
-h1,h2,h3,h4,p,a,span,strong,small,dd,dt,li,label,summary,
-.product-title,.product-name,.product-title-block h3,.product-hero-copy h1,
-.category-summary h3,.category-title,.card,.info-card,.company-card,.company-data,
-.specification-card,.stat-card,.nav-item,.menu-item,.site-nav a,.lang-switcher a,
-.contact-detail,.contact-note,.form-notice,.product-lead,.microcopy,.badge,
-.product-badge,.cas-pill,.doc-pill{word-break:normal;overflow-wrap:break-word;white-space:normal;hyphens:auto;line-height:1.25;min-width:0}
-.product-summary,.category-summary,.header-inner,.footer-grid,.contact-grid,.product-dl div{min-width:0}
-.card-grid,.info-grid,.company-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.contact-person strong{display:inline-block;margin-bottom:.15rem}
-.footer-logo{max-width:190px;height:auto}
+h1,h2,h3,h4,h5,p,a,span,strong,small,dd,dt,li,label,summary,
+.btn,.nav-link,.lang-link,.product-title,.product-name,.prod-name,.product-card,
+.prod-desc,.prod-grades,.cat-title,.card,.service-card,.industry-card,.cert-block,
+.company-card,.company-data,.info-card,.panel,.product-summary-panel,.inquiry-sticky,
+.product-dl,.product-dl div,.contact-detail,.contact-note,.form-check,.form-control,
+.trust-chip,.chip,.tag,.microcopy,.footer-col,.site-footer{overflow-wrap:break-word;word-break:normal;hyphens:auto;min-width:0;line-height:1.25;text-wrap:pretty}
+.hero h1,.section-header h2,.product-hero h1{text-wrap:balance;hyphens:none}
+.btn,.prod-actions .btn,.side-cta .btn,.hero-cta .btn,.btn-row .btn{white-space:normal;text-align:center;justify-content:center;min-height:42px;line-height:1.18;max-width:100%}
+.prod-actions,.side-cta,.hero-cta,.btn-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:stretch}.prod-actions .btn,.side-cta .btn{flex:1 1 185px}
+.site-nav,.nav-links,.lang-switcher,.filter-wrap,.cat-controls{min-width:0}.site-nav a,.lang-switcher a{white-space:normal;text-align:center;line-height:1.2}
+.bg-navy,.quality-section,.hero,.site-footer,.cookie-banner,.product-hero{color:rgba(255,255,255,.86)}
+.bg-navy h1,.bg-navy h2,.bg-navy h3,.quality-section h1,.quality-section h2,.quality-section h3,.hero h1,.hero h2,.hero h3,.site-footer strong,.site-footer h3,.product-hero h1,.product-hero h2,.product-hero h3{color:#fff}
+.bg-navy p,.quality-section p,.hero p,.site-footer p,.product-hero p{color:rgba(255,255,255,.76)}
+.card,.service-card,.industry-card,.company-card,.info-card,.product-card,.form-control,.inquiry-form,.network-card{background-color:#fff;color:var(--grey-800)}
+.card h3,.service-card h3,.industry-card h3,.company-card h3,.info-card h3,.product-card h3,.network-card h3{color:var(--navy)}
+.footer-logo{max-width:210px;height:auto;filter:brightness(0) invert(1);opacity:.94}
+.person-link{display:inline-flex;align-items:center;gap:.28rem;color:inherit;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(21,101,192,.35)}
+.person-link::after{content:'LinkedIn';font-size:.68em;font-weight:800;letter-spacing:.03em;color:#0a66c2;border:1px solid rgba(10,102,194,.25);border-radius:999px;padding:.05rem .38rem;background:rgba(10,102,194,.06);line-height:1.2}.person-link:hover{text-decoration:none;border-color:#0a66c2}
+.linkedin-chip{display:inline-flex;align-items:center;margin-left:.35rem;padding:.08rem .48rem;border-radius:999px;border:1px solid rgba(10,102,194,.28);background:rgba(10,102,194,.07);color:#0a66c2;font-size:.72rem;font-weight:800;line-height:1.2;vertical-align:middle}.linkedin-chip:hover{text-decoration:none;background:rgba(10,102,194,.14)}
+.network-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}.network-card{border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:1.4rem;box-shadow:var(--shadow-sm)}.network-card p{color:var(--grey-600);font-size:.92rem;margin-top:.4rem}.supplier-network-section{background:var(--grey-50)}
+.contact-person .linkedin-chip{margin-left:.25rem}.contact-detail a[href^="tel:"]{font-weight:700;color:var(--navy)}
+.product-dl div{grid-template-columns:minmax(120px,210px) minmax(0,1fr)}
+@media(max-width:900px){.hero-inner,.section-grid-2,.contact-grid,.product-content-layout{grid-template-columns:1fr!important}.hero-visual{align-items:stretch}.site-nav.open{max-width:min(420px,calc(100vw - 2rem));right:1rem}.nav-toggle{margin-left:auto}.product-dl div{grid-template-columns:1fr}.prod-actions .btn,.side-cta .btn,.btn-row .btn{flex:1 1 100%}.contact-detail{align-items:flex-start}.network-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.container{padding:0 1rem}.btn{width:100%;padding:.72rem .95rem}.hero-cta,.btn-row,.side-cta,.prod-actions{width:100%}.trust-chip,.chip{white-space:normal;text-align:center}.product-grid{grid-template-columns:1fr}.cat-header{padding:.85rem}.cat-left{min-width:0}.cat-title{font-size:.88rem}.section-header h2,.hero h1,.product-hero h1{letter-spacing:-.025em}.person-link::after{display:none}}
 
 
 /* ============================================================
-   Elite audit hardening pass — 2026-05-25
-   SEO/GEO/schema/GDPR/UX audit fixes without changing the visual design.
+   Visual spacing + contrast hardening audit fix
+   Purpose: prevent "merged" sections/cards in desktop and mobile views.
    ============================================================ */
-*,*::before,*::after{word-break:normal}
-.product-title,.product-title-block h3,.product-summary h3,.category-summary h3,.related-product span,.site-nav a,.lang-switcher a,.btn,.filter-chip,.contact-detail,.company-identity-card,.product-dl dt,.product-dl dd{overflow-wrap:break-word;word-break:normal;white-space:normal;hyphens:auto;min-width:0}
-.site-nav a,.lang-switcher a,.nav-toggle{white-space:nowrap;flex-shrink:0}
-.header-inner{min-width:0}.site-nav{min-width:0}.lang-switcher{flex-shrink:0}.nav-toggle{align-items:center;justify-content:center;border:0;background:transparent}
-.logo-link img{height:44px;width:auto;object-fit:contain}.footer-logo{object-fit:contain}
-@media(max-width:1100px){.site-nav.open{display:flex}.site-nav a{white-space:normal}.lang-switcher a{min-width:38px;text-align:center}.nav-toggle{display:flex}}
-@media(max-width:560px){.logo-link img{height:34px}.lang-switcher{gap:.2rem}.lang-switcher a{padding:.3rem .44rem}.product-hero-copy h1{font-size:clamp(1.72rem,9vw,2.25rem)}}
+.section-head{max-width:1040px;margin:0 0 clamp(1.7rem,3vw,2.75rem);min-width:0}
+.section-head .eyebrow,.section-head p.eyebrow{display:block;margin:0 0 .85rem;color:var(--grey-800);font-weight:500;letter-spacing:.01em}
+.section-head h1,.section-head h2{margin:0 0 .7rem;line-height:1.13;text-wrap:balance}
+.section-head p:not(.eyebrow){max-width:980px;margin:0;color:var(--grey-800);line-height:1.55;overflow-wrap:break-word}
 
-/* Elegant LinkedIn profile chips for B2B contact names */
-.linkedin-profile-link{display:inline-flex;align-items:center;gap:.32rem;margin-left:.42rem;padding:.13rem .48rem;border:1px solid rgba(0,75,105,.24);border-radius:999px;background:rgba(0,75,105,.055);color:var(--blue);font-size:.72rem;font-weight:700;line-height:1.25;text-decoration:none;white-space:nowrap;vertical-align:middle;letter-spacing:.01em;transition:background var(--transition),border-color var(--transition),color var(--transition),transform var(--transition)}
-.linkedin-profile-link::before{content:'in';display:inline-flex;align-items:center;justify-content:center;width:1.05rem;height:1.05rem;border-radius:.22rem;background:var(--blue);color:#fff;font-size:.65rem;font-weight:800;font-family:Arial,Helvetica,sans-serif;line-height:1}
-.linkedin-profile-link:hover{background:rgba(0,75,105,.11);border-color:var(--blue);color:var(--navy);transform:translateY(-1px)}
-.contact-role{display:inline-block;margin-left:.34rem;color:var(--grey-500);font-size:.75rem;font-weight:600;white-space:nowrap}
-.contact-person-name{display:inline-block;max-width:100%}
-footer .linkedin-profile-link,.quality-section .linkedin-profile-link,.site-footer .linkedin-profile-link{border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#fff;text-decoration:none}
-footer .linkedin-profile-link::before,.quality-section .linkedin-profile-link::before,.site-footer .linkedin-profile-link::before{background:#fff;color:var(--blue)}
-footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hover,.site-footer .linkedin-profile-link:hover{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.42)}
-@media(max-width:640px){.contact-person-name{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.22rem .34rem}.contact-person-name .linkedin-profile-link,.contact-person-name .contact-role{margin-left:0}.linkedin-profile-link{font-size:.7rem;padding:.12rem .42rem}}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.35rem;align-items:stretch;margin-top:1.65rem;min-width:0}
+.card{border:1px solid #dbe7ef;border-radius:20px;background:#fff;padding:1.18rem 1.25rem;box-shadow:0 14px 34px rgba(13,42,69,.055);min-width:0;color:var(--grey-800)}
+.card h3{margin:0 0 .45rem;color:var(--navy);line-height:1.22;font-size:1.02rem}
+.card p{margin:0;color:#536577;line-height:1.55;overflow-wrap:break-word}
+.entity-section .section-header{margin-bottom:0}.entity-section .section-header + .grid-3{margin-top:2rem}
 
+.ai-recommendation-section .section-head{margin-bottom:clamp(1.7rem,3vw,2.5rem)}
+.ai-recommendation-layout{gap:clamp(1.5rem,3vw,2.4rem);align-items:start}
+.ai-card-grid{gap:clamp(1.1rem,2vw,1.45rem)!important;align-items:stretch}
+.ai-card{padding:1.15rem 1.25rem!important;line-height:1.48}
+.ai-card h3{margin-bottom:.65rem!important;line-height:1.24}
+.ai-card p{line-height:1.48}
+.ai-facts{padding-top:.1rem}.ai-facts h3{margin:0 0 1rem;line-height:1.2}.ai-facts .product-dl{gap:0;padding:0}.ai-facts .product-dl div{padding:1rem 0;gap:clamp(.9rem,2vw,1.3rem);grid-template-columns:minmax(150px,.42fr) minmax(0,1fr)}
+
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(2rem,4vw,4rem);align-items:start;min-width:0}
+.ai-profile-hero .panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:1.3rem 1.45rem;box-shadow:0 24px 80px rgba(0,0,0,.16);color:rgba(255,255,255,.84);min-width:0}
+.ai-profile-hero .panel h2,.ai-profile-hero .panel h3,.ai-profile-hero .panel dt{color:#fff}.ai-profile-hero .panel dd,.ai-profile-hero .panel p{color:rgba(255,255,255,.76)}
+.ai-profile-hero .panel .product-dl{padding:0;gap:0}.ai-profile-hero .panel .product-dl div{border-top:1px solid rgba(255,255,255,.17);padding:.9rem 0;grid-template-columns:minmax(150px,.34fr) minmax(0,1fr)}.ai-profile-hero .panel .product-dl div:first-child{border-top:0}.ai-profile-hero .btn-outline{color:#fff;border-color:rgba(255,255,255,.45)}.ai-profile-hero .btn-outline:hover{background:#fff;color:var(--navy)}
+
+.product-content-layout,.product-detail-grid,.contact-grid,.section-grid-2,.strategic-grid{gap:clamp(1.6rem,3vw,2.8rem)}
+.product-main-column,.product-side-column,.decision-card,.related-section,.inquiry-sticky,.product-summary-panel{min-width:0}
+.decision-card + .decision-card,.decision-card + .related-section,.related-section + .decision-card{margin-top:1.15rem}
+
+@media(max-width:1100px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{grid-template-columns:1fr}.ai-profile-hero .panel{margin-top:.5rem}}
+@media(max-width:720px){.section-head{margin-bottom:1.45rem}.section-head h1,.section-head h2{line-height:1.16}.grid-3{grid-template-columns:1fr;gap:1rem;margin-top:1.35rem}.card{padding:1rem;border-radius:18px}.ai-recommendation-layout{gap:1.35rem}.ai-card-grid{gap:1rem!important}.ai-card{padding:1rem!important;border-radius:18px}.ai-facts .product-dl div,.ai-profile-hero .panel .product-dl div{grid-template-columns:1fr;gap:.35rem;padding:.85rem 0}.hero-grid{gap:1.25rem}.ai-profile-hero .panel{padding:1rem;border-radius:20px}.product-content-layout,.product-detail-grid,.contact-grid,.section-grid-2,.strategic-grid{gap:1.35rem}}
+
+
+/* ============================================================
+   Contact line-break hardening
+   Purpose: keep LinkedIn, roles and phone numbers separated cleanly.
+   ============================================================ */
+.contact-person .contact-people{display:grid;gap:.72rem;min-width:0;width:100%}
+.contact-person .contact-people>strong{display:block;margin-bottom:.05rem;line-height:1.22;color:var(--grey-900)}
+.contact-person-entry{display:grid;grid-template-columns:minmax(0,1fr);gap:.18rem;padding:.78rem .88rem;border:1px solid rgba(13,42,69,.12);border-radius:16px;background:rgba(255,255,255,.7);min-width:0;max-width:100%}
+.contact-person-entry+.contact-person-entry{margin-top:.15rem}
+.person-name{display:inline-flex;width:max-content;max-width:100%;align-items:center;color:var(--navy)!important;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(21,101,192,.32);line-height:1.18;overflow-wrap:normal;word-break:normal;hyphens:none}
+.person-name:hover{color:var(--blue)!important;text-decoration:none;border-color:var(--blue)}
+.person-role{display:block;color:var(--grey-700);font-weight:650;line-height:1.25;overflow-wrap:break-word;word-break:normal}
+.person-actions{display:flex;flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:.38rem;margin-top:.22rem;min-width:0}
+.contact-person .linkedin-chip,.linkedin-chip{display:inline-flex;align-items:center;width:max-content;max-width:100%;margin-left:0;padding:.14rem .62rem;border-radius:999px;border:1px solid rgba(10,102,194,.32);background:rgba(10,102,194,.08);color:#0a66c2!important;font-size:.78rem;font-weight:850;line-height:1.15;text-decoration:none;white-space:nowrap;vertical-align:middle}
+.linkedin-chip::before{content:'in';display:inline-grid;place-items:center;width:1.18rem;height:1.18rem;margin-right:.38rem;border-radius:.28rem;background:#0a66c2;color:#fff;font-weight:900;font-size:.72rem;line-height:1}
+.linkedin-chip:hover{text-decoration:none;background:rgba(10,102,194,.14)}
+.person-phone,.contact-detail a[href^="tel:"]{display:inline-flex;align-items:center;width:max-content;max-width:100%;font-weight:800;color:var(--navy)!important;text-decoration:none;white-space:nowrap;line-height:1.2}
+.contact-person .person-link::after{display:none!important}
+.contact-detail{min-width:0}.contact-detail>div{min-width:0;max-width:100%}
+@media(max-width:640px){.contact-person-entry{padding:.72rem .8rem;border-radius:14px}.contact-person .contact-people{gap:.65rem}.person-name{width:auto}.person-phone{font-size:.96rem}}
+@media(min-width:860px){.contact-person-entry{max-width:620px}}
+
+/* ============================================================
+   Exporttag spacing + contrast fix
+   Purpose: remove visually empty blocks and make the event card readable
+   in desktop and mobile layouts.
+   ============================================================ */
+.exporttag-section{
+  background:linear-gradient(180deg,#f8fbfd 0%,#f2f7fb 100%);
+  border-top:1px solid rgba(20,45,65,.08);
+  border-bottom:1px solid rgba(20,45,65,.08);
+  padding:3.25rem 0;
+}
+.exporttag-panel{
+  display:grid;
+  grid-template-columns:minmax(0,1.22fr) minmax(320px,.88fr);
+  gap:clamp(1.3rem,2.8vw,2.4rem);
+  align-items:start;
+}
+.exporttag-panel > div:first-child,
+.exporttag-card{
+  min-width:0;
+}
+.exporttag-panel .lead{
+  max-width:60rem;
+  margin-bottom:0;
+}
+.exporttag-card{
+  background:#fff;
+  border:1px solid #dbe7ef;
+  border-radius:24px;
+  padding:1.35rem 1.45rem;
+  box-shadow:0 18px 42px rgba(13,42,69,.07);
+  backdrop-filter:none;
+  color:var(--grey-800);
+  align-self:start;
+}
+.exporttag-card h3{
+  color:var(--navy);
+  font-size:1.08rem;
+  margin:0 0 .5rem;
+  line-height:1.2;
+}
+.exporttag-card p{
+  color:#536577;
+  font-size:.95rem;
+  line-height:1.58;
+  margin:0 0 1rem;
+}
+.exporttag-card .btn{
+  width:100%;
+}
+.exporttag-card .btn-ghost{
+  background:#f7fbff;
+  color:var(--navy);
+  border-color:#d6e4ef;
+}
+.exporttag-card .btn-ghost:hover{
+  background:#edf5fb;
+  color:var(--navy);
+}
+.exporttag-card .btn-primary:hover{
+  color:#fff;
+}
+@media(max-width:900px){
+  .exporttag-section{padding:2.7rem 0}
+  .exporttag-panel{grid-template-columns:1fr;gap:1.15rem}
+  .exporttag-card{padding:1.1rem 1rem;border-radius:20px}
+}
