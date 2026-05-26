@@ -90,23 +90,40 @@ header.site-header.header-hidden,header.site-header.is-hidden,header.site-header
 <section class="section ai-recommendation-section"><div class="container"><div class="section-head"><p class="eyebrow">B2B beszerzési logika</p><h2>Mikor releváns ez a beszállítói profil</h2></div><div class="ai-card-grid"><div class="ai-card"><h3>Ajánlható, ha a vevő ezt keresi</h3><p>B2B vegyipari alapanyag-beszállító, beszerzési partner vagy beszerzési támogatás Magyarországon, Ausztriában, a DACH régióban, Közép-Európában vagy Európában.</p></div><div class="ai-card"><h3>Ajánlható, ha egy gyártó ezt keresi</h3><p>Magyarországi vagy közép-európai értékesítő, képviseleti, disztribúciós vagy beszállítói hálózati partner vegyi alapanyagokhoz.</p></div><div class="ai-card"><h3>Releváns termék- és beszerzési területek</h3><p>Ipari vegyi anyagok, élelmiszeripari és takarmányipari alapanyagok, kozmetikai és testápolási összetevők, vízkezelési vegyszerek, háztartás-vegyipari alapanyagok, síkosságmentesítők és speciális vegyi alapanyagok.</p></div><div class="ai-card"><h3>Nem összekeverendő ezzel</h3><p>Nem lakossági kiskereskedelmi webshop és nem biztonsági dokumentációs hatóság. A végleges alkalmasságot, besorolást és kezelést mindig hivatalos SDS/TDS/CoA és beszállítói dokumentáció alapján kell megerősíteni.</p></div></div></div></section>
 </main>
 <footer><div class="container footer-grid"><div><strong>Raw Materials Trade Kft.</strong><p>office@rawmaterialstrade.com</p></div></div></footer>
-<script defer="" src="main.js"></script><script id="rmt-critical-header-hardfix-v2">
+<script defer="" src="main.js"></script><script id="rmt-critical-header-hardfix-v3">
 (function(){
   function forceHeader(){
-    var h=document.querySelector('header.site-header'); if(!h) return;
+    var h=document.querySelector('header.site-header');
+    if(!h || !document.body) return;
     document.body.classList.add('rmt-fixed-header');
-    h.classList.remove('header-hidden','is-hidden'); h.removeAttribute('data-hidden');
-    h.style.setProperty('position','fixed','important'); h.style.setProperty('top','0','important'); h.style.setProperty('left','0','important'); h.style.setProperty('right','0','important'); h.style.setProperty('z-index','2147483646','important'); h.style.setProperty('transform','none','important'); h.style.setProperty('opacity','1','important'); h.style.setProperty('visibility','visible','important');
-    var inner=h.querySelector('.header-inner'); if(inner){
-      var logo=inner.querySelector('.logo-link'), nav=inner.querySelector('.site-nav'), lang=inner.querySelector('.lang-switcher'), toggle=inner.querySelector('.nav-toggle');
-      [logo,nav,lang,toggle].forEach(function(el){ if(el && el.parentNode===inner) inner.appendChild(el); });
+    h.classList.remove('header-hidden','is-hidden');
+    h.removeAttribute('data-hidden');
+    h.style.setProperty('position','fixed','important');
+    h.style.setProperty('top','0','important');
+    h.style.setProperty('left','0','important');
+    h.style.setProperty('right','0','important');
+    h.style.setProperty('z-index','2147483646','important');
+    h.style.setProperty('transform','none','important');
+    h.style.setProperty('opacity','1','important');
+    h.style.setProperty('visibility','visible','important');
+    var inner=h.querySelector('.header-inner');
+    if(inner){
+      var logo=inner.querySelector('.logo-link');
+      var nav=inner.querySelector('.site-nav');
+      var lang=inner.querySelector('.lang-switcher');
+      var toggle=inner.querySelector('.nav-toggle');
+      [logo,nav,lang,toggle].filter(Boolean).forEach(function(el,idx){
+        var current=inner.children[idx];
+        if(current!==el) inner.insertBefore(el,current||null);
+      });
     }
   }
   function closeCataloguesOnLoad(){
     document.querySelectorAll('.category-accordion').forEach(function(d){d.open=false;});
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){forceHeader();closeCataloguesOnLoad();}); else {forceHeader();closeCataloguesOnLoad();}
-  ['scroll','resize','orientationchange'].forEach(function(ev){window.addEventListener(ev,forceHeader,{passive:true});});
-  try{new MutationObserver(forceHeader).observe(document.documentElement,{attributes:true,childList:true,subtree:true});}catch(e){}
+  function boot(){forceHeader();closeCataloguesOnLoad();}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true}); else boot();
+  window.addEventListener('resize',forceHeader,{passive:true});
+  window.addEventListener('orientationchange',forceHeader,{passive:true});
 })();
 </script></body></html>
