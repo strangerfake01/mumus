@@ -34,16 +34,153 @@ function initCatalogue(){
   const result=document.getElementById('resultCount');
   const no=document.getElementById('noResults');
   let filter='all';
+
+  const lang=getLang();
+  const labels={
+    en:{suggest:'Closest product matches',empty:'No close product name found. Try a shorter word, CAS number or category.'},
+    hu:{suggest:'Legközelebbi terméktalálatok',empty:'Nem találtunk közeli terméknevet. Próbáljon rövidebb szót, CAS-számot vagy kategóriát.'},
+    'de-at':{suggest:'Naheliegende Produkttreffer',empty:'Kein naher Produktname gefunden. Versuchen Sie ein kürzeres Wort, eine CAS-Nummer oder eine Kategorie.'}
+  }[lang]||{suggest:'Closest product matches',empty:'No close product name found. Try a shorter word, CAS number or category.'};
+
+  function normalize(str){
+    return String(str||'')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g,'')
+      .replace(/[–—−]/g,'-')
+      .replace(/[^a-z0-9%]+/g,' ')
+      .replace(/\s+/g,' ')
+      .trim();
+  }
+  function levenshtein(a,b){
+    a=normalize(a);b=normalize(b);
+    if(a===b)return 0;
+    if(!a.length)return b.length;
+    if(!b.length)return a.length;
+    if(a.length>b.length){const t=a;a=b;b=t;}
+    let prev=Array.from({length:a.length+1},(_,i)=>i);
+    for(let j=1;j<=b.length;j++){
+      const cur=[j];
+      for(let i=1;i<=a.length;i++){
+        cur[i]=Math.min(cur[i-1]+1,prev[i]+1,prev[i-1]+(a[i-1]===b[j-1]?0:1));
+      }
+      prev=cur;
+    }
+    return prev[a.length];
+  }
+  function titleOf(card){
+    return (card.querySelector('.product-title-block h3,.product-title,.product-summary h3,h3')?.textContent||card.dataset.name||'').trim();
+  }
+  function hrefOf(card){
+    return card.querySelector('a.product-detail-link,a[href$=".html"]')?.getAttribute('href')||'';
+  }
+  function productInfo(card){
+    const title=titleOf(card);
+    return {card,title,href:hrefOf(card),hay:normalize(`${title} ${card.dataset.name||''} ${card.textContent||''}`),cats:card.dataset.categories||''};
+  }
+  const products=cards.map(productInfo);
+  function scoreProduct(info,rawQuery){
+    const q=normalize(rawQuery);
+    if(!q)return 9999;
+    const hay=info.hay;
+    const title=normalize(info.title);
+    if(hay.includes(q))return title.includes(q)?0:1;
+    const qTokens=q.split(' ').filter(Boolean);
+    const hTokens=hay.split(' ').filter(Boolean);
+    let total=0, matched=0;
+    for(const qt of qTokens){
+      if(qt.length<2)continue;
+      let best=999;
+      for(const ht of hTokens){
+        if(ht.includes(qt)||qt.includes(ht)){best=0;break;}
+        if(qt.length>=3 && ht.length>=3){
+          const d=levenshtein(qt,ht);
+          if(d<best)best=d;
+        }
+      }
+      const tolerance=qt.length<=4?1:Math.max(1,Math.floor(qt.length*.32));
+      if(best<=tolerance){matched++;total+=best;} else total+=6;
+    }
+    if(!qTokens.length)return 9999;
+    return matched?total+(qTokens.length-matched)*4:9999;
+  }
   function closeAll(){accordions.forEach(cat=>{cat.open=false;});}
   function openOnly(target){accordions.forEach(cat=>{cat.open=(cat===target);});}
+  function ensureSuggestionBox(){
+    if(!search)return null;
+    let box=document.getElementById('productSuggestions');
+    if(box)return box;
+    box=document.createElement('div');
+    box.id='productSuggestions';
+    box.className='product-suggestions';
+    box.setAttribute('role','listbox');
+    box.setAttribute('aria-label',labels.suggest);
+    search.parentElement?.appendChild(box);
+    return box;
+  }
+  function suggestionCandidates(q){
+    const nq=normalize(q);
+    if(nq.length<2)return [];
+    return products
+      .map(info=>({...info,score:scoreProduct(info,q)}))
+      .filter(info=>info.score<9999)
+      .sort((a,b)=>a.score-b.score || a.title.localeCompare(b.title))
+      .slice(0,8);
+  }
+  function renderSuggestions(q){
+    const box=ensureSuggestionBox();
+    if(!box)return;
+    const nq=normalize(q);
+    if(nq.length<2){box.classList.remove('visible');box.innerHTML='';return;}
+    const matches=suggestionCandidates(q);
+    box.innerHTML='';
+    const help=document.createElement('div');
+    help.className='suggestion-help';
+    help.textContent=labels.suggest;
+    box.appendChild(help);
+    if(!matches.length){
+      const empty=document.createElement('div');
+      empty.className='product-suggestion-empty';
+      empty.textContent=labels.empty;
+      box.appendChild(empty);
+      box.classList.add('visible');
+      return;
+    }
+    matches.forEach(info=>{
+      const btn=document.createElement('button');
+      btn.type='button';
+      btn.className='product-suggestion-item';
+      btn.setAttribute('role','option');
+      const name=document.createElement('span');
+      name.className='product-suggestion-name';
+      name.textContent=info.title;
+      const meta=document.createElement('span');
+      meta.className='product-suggestion-meta';
+      meta.textContent=(info.card.dataset.name||'').replace(/\s+/g,' ').trim();
+      btn.appendChild(name);btn.appendChild(meta);
+      btn.addEventListener('click',()=>{
+        if(info.href){window.location.href=info.href;return;}
+        search.value=info.title;
+        applyVisibility();
+        box.classList.remove('visible');
+      });
+      box.appendChild(btn);
+    });
+    box.classList.add('visible');
+  }
+  function productMatchesQuery(card,q){
+    const nq=normalize(q);
+    if(!nq)return true;
+    const info=products.find(p=>p.card===card)||productInfo(card);
+    return scoreProduct(info,nq)<=Math.max(2,Math.floor(nq.length*.55));
+  }
   function applyVisibility(){
-    const q=(search?.value||'').toLowerCase().trim();
+    const q=(search?.value||'').trim();
     let visible=0;
     cards.forEach(card=>{
-      const txt=(card.dataset.name||card.textContent||'').toLowerCase();
       const cats=(card.dataset.categories||'').split(/\s+/);
       const okCat=filter==='all'||cats.includes(filter);
-      const okQ=!q||txt.includes(q);
+      const okQ=!q||productMatchesQuery(card,q);
       const show=okCat&&okQ;
       card.classList.toggle('hidden',!show);
       if(show) visible++;
@@ -55,23 +192,31 @@ function initCatalogue(){
     });
     if(result) result.textContent=visible;
     if(no) no.classList.toggle('visible',visible===0);
+    renderSuggestions(q);
     return {q,visible};
   }
   function run(source='init'){
-    const state=applyVisibility();
+    applyVisibility();
     if(source==='init') closeAll();
     if(source==='filter'){
+      const box=document.getElementById('productSuggestions');
+      if(box)box.classList.remove('visible');
       if(filter==='all'){closeAll();return;}
       const target=accordions.find(cat=>(cat.dataset.category||'')===filter && cat.style.display!=='none');
       if(target){openOnly(target);target.scrollIntoView({behavior:'smooth',block:'nearest'});} else closeAll();
       return;
     }
     if(source==='search'){
-      // Keep category accordions closed while searching; they open only by explicit user category click.
       closeAll();
     }
   }
   search?.addEventListener('input',()=>run('search'));
+  search?.addEventListener('focus',()=>renderSuggestions(search.value));
+  document.addEventListener('click',e=>{
+    const box=document.getElementById('productSuggestions');
+    if(box && search && !box.contains(e.target) && !search.contains(e.target)) box.classList.remove('visible');
+  });
+  search?.addEventListener('keydown',e=>{if(e.key==='Escape'){document.getElementById('productSuggestions')?.classList.remove('visible');}});
   chips.forEach(btn=>btn.addEventListener('click',()=>{
     chips.forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');

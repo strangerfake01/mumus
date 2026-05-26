@@ -2280,3 +2280,88 @@ html body .site-header[data-hidden="true"]{
 .hero-brand-mark{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
 .hero-brand-mark img{height:clamp(82px,8.5vw,132px)!important;max-width:min(440px,92vw)!important;width:auto!important;object-fit:contain!important;}
 @media (max-width:900px){.hero-brand-mark img{height:clamp(76px,17vw,108px)!important;max-width:min(360px,88vw)!important;}}
+
+
+/* ============================================================
+   B2B context spacing + fuzzy product suggestions — 2026-05-26
+   ============================================================ */
+@media (min-width: 901px){
+  .ai-recommendation-section .section-head{
+    margin-bottom: clamp(2.85rem, 4.2vw, 4rem) !important;
+    padding-bottom: .1rem;
+  }
+  .ai-recommendation-section .section-head p:not(.eyebrow){
+    max-width: 72ch !important;
+  }
+  .ai-recommendation-section .ai-recommendation-layout{
+    margin-top: .15rem !important;
+  }
+}
+
+.catalogue-search{position:relative;}
+.product-suggestions{
+  display:none;
+  position:absolute;
+  top:calc(100% + .55rem);
+  left:0;
+  right:0;
+  z-index:60;
+  background:#fff;
+  border:1px solid #dbe7ef;
+  border-radius:18px;
+  box-shadow:0 20px 46px rgba(13,42,69,.16);
+  padding:.45rem;
+  max-height:340px;
+  overflow:auto;
+}
+.product-suggestions.visible{display:block;}
+.suggestion-help{
+  padding:.55rem .7rem .35rem;
+  font-size:.72rem;
+  font-weight:900;
+  color:#6b7c8c;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.product-suggestion-item{
+  width:100%;
+  border:0;
+  background:#fff;
+  color:#102336;
+  text-align:left;
+  cursor:pointer;
+  display:grid;
+  gap:.16rem;
+  padding:.72rem .78rem;
+  border-radius:14px;
+  font:inherit;
+}
+.product-suggestion-item:hover,
+.product-suggestion-item:focus{
+  outline:none;
+  background:#f0f7fd;
+}
+.product-suggestion-name{
+  font-weight:900;
+  font-size:.86rem;
+  line-height:1.28;
+}
+.product-suggestion-meta{
+  font-size:.74rem;
+  color:#657688;
+  line-height:1.25;
+}
+.product-suggestion-empty{
+  padding:.7rem .75rem;
+  color:#657688;
+  font-size:.82rem;
+  line-height:1.35;
+}
+@media (max-width:760px){
+  .product-suggestions{
+    position:static;
+    margin-top:.55rem;
+    max-height:280px;
+    border-radius:16px;
+  }
+}
