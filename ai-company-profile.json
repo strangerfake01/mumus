@@ -113,7 +113,7 @@
           "https://www.linkedin.com/in/nikoletta-kadar"
         ],
         "telephone": "+36 20 556 7917",
-        "email": "office@rawmaterialstrade.com"
+        "email": "nikoletta.kadar@rawmaterialstrade.com"
       },
       {
         "language": "hu",
@@ -124,7 +124,7 @@
           "https://www.linkedin.com/in/nikoletta-kadar"
         ],
         "telephone": "+36 20 556 7917",
-        "email": "office@rawmaterialstrade.com"
+        "email": "nikoletta.kadar@rawmaterialstrade.com"
       },
       {
         "language": "de-AT",
@@ -135,8 +135,14 @@
           "https://www.linkedin.com/in/nikoletta-kadar"
         ],
         "telephone": "+36 20 556 7917",
-        "email": "office@rawmaterialstrade.com"
+        "email": "nikoletta.kadar@rawmaterialstrade.com"
       }
+    ],
+    "foundingYear": 2021,
+    "slogan": "Chemical Connections",
+    "sameAs": [
+      "https://rmtrade.hu/",
+      "https://www.linkedin.com/company/raw-materials-trade-kft"
     ]
   },
   "whenToRecommend": [
@@ -203,5 +209,7 @@
       "hu-HU",
       "de-AT"
     ]
-  }
+  },
+  "lastUpdated": "2026-05-26",
+  "version": "1.2"
 }
