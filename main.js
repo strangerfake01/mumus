@@ -9,7 +9,99 @@ const FORM_TEXT={
 function initNav(){const t=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!t||!n)return;const setOpen=o=>{n.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false')};t.addEventListener('click',()=>setOpen(!n.classList.contains('open')));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));document.addEventListener('click',e=>{if(!t.contains(e.target)&&!n.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});}
 function initCookieBanner(){const b=document.getElementById('cookieBanner'),ok=document.getElementById('cookieOk');if(!b)return;if(localStorage.getItem('rmt_cookie'))return;setTimeout(()=>b.classList.add('visible'),700);ok&&ok.addEventListener('click',()=>{localStorage.setItem('rmt_cookie','essential');b.classList.remove('visible')});}
 function initFAQ(){document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q')?.addEventListener('click',()=>{const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!o)item.classList.add('open');});});}
-function initCatalogue(){const search=document.getElementById('productSearch');const chips=[...document.querySelectorAll('.filter-chip')];const cards=[...document.querySelectorAll('.product-card')];const accordions=[...document.querySelectorAll('.category-accordion')];const result=document.getElementById('resultCount');const no=document.getElementById('noResults');let filter='all';function syncAccordions(query){let firstVisible=null;accordions.forEach(cat=>{const hasVisible=!!cat.querySelector('.product-card:not(.hidden)');cat.style.display=hasVisible?'':'none';if(!hasVisible){cat.open=false;return;}const catKey=cat.dataset.category||'';if(filter!=='all'){const shouldOpen=catKey===filter;cat.open=shouldOpen;if(shouldOpen&&!firstVisible)firstVisible=cat;}else if(query){cat.open=true;if(!firstVisible)firstVisible=cat;}else{if(cat.open&&!firstVisible)firstVisible=cat;}});if(filter==='all'&&!query){const visibleAccordions=accordions.filter(cat=>cat.style.display!=='none');if(visibleAccordions.length&&!visibleAccordions.some(cat=>cat.open)){visibleAccordions[0].open=true;firstVisible=visibleAccordions[0];}}if(filter!=='all'&&firstVisible){firstVisible.scrollIntoView({behavior:'smooth',block:'nearest'});}}function run(){const q=(search?.value||'').toLowerCase().trim();let visible=0;cards.forEach(card=>{const txt=(card.dataset.name||'').toLowerCase();const cats=(card.dataset.categories||'').split(/\s+/);const okCat=filter==='all'||cats.includes(filter);const okQ=!q||txt.includes(q);const show=okCat&&okQ;card.classList.toggle('hidden',!show);if(show)visible++;});syncAccordions(q);if(result)result.textContent=visible;if(no)no.classList.toggle('visible',visible===0);}search?.addEventListener('input',run);chips.forEach(btn=>btn.addEventListener('click',()=>{chips.forEach(b=>b.classList.remove('active'));btn.classList.add('active');filter=btn.dataset.cat||'all';run();}));accordions.forEach(acc=>acc.addEventListener('toggle',()=>{if(acc.open){accordions.forEach(other=>{if(other!==acc)other.open=false;});}}));run();}
+function initCatalogue(){
+  const search=document.getElementById('productSearch');
+  const chips=[...document.querySelectorAll('.filter-chip')];
+  const cards=[...document.querySelectorAll('.product-card')];
+  const accordions=[...document.querySelectorAll('.category-accordion')];
+  const result=document.getElementById('resultCount');
+  const no=document.getElementById('noResults');
+  let filter='all';
+  let userOpenedCategory=false;
+
+  function closeAll(){
+    accordions.forEach(cat=>{cat.open=false;});
+  }
+
+  function visibleCardsIn(cat){
+    return [...cat.querySelectorAll('.product-card')].filter(card=>!card.classList.contains('hidden'));
+  }
+
+  function syncAccordions(query, source){
+    let visible=0;
+    let firstVisible=null;
+
+    accordions.forEach(cat=>{
+      const hasVisible=!!cat.querySelector('.product-card:not(.hidden)');
+      cat.style.display=hasVisible?'':'none';
+      if(hasVisible && !firstVisible) firstVisible=cat;
+      if(!hasVisible) cat.open=false;
+    });
+
+    if(source==='filter'){
+      closeAll();
+      if(filter!=='all'){
+        const target=accordions.find(cat=>(cat.dataset.category||'')===filter && cat.style.display!=='none');
+        if(target){
+          target.open=true;
+          userOpenedCategory=true;
+          target.scrollIntoView({behavior:'smooth',block:'nearest'});
+        }
+      }else{
+        userOpenedCategory=false;
+      }
+      return;
+    }
+
+    if(source==='search'){
+      if(query){
+        accordions.forEach(cat=>{ if(cat.style.display!=='none') cat.open=true; });
+      }else if(!userOpenedCategory){
+        closeAll();
+      }
+      return;
+    }
+
+    // Initial state: all product categories stay collapsed.
+    closeAll();
+  }
+
+  function run(source='init'){
+    const q=(search?.value||'').toLowerCase().trim();
+    let visible=0;
+    cards.forEach(card=>{
+      const txt=(card.dataset.name||'').toLowerCase();
+      const cats=(card.dataset.categories||'').split(/\s+/);
+      const okCat=filter==='all'||cats.includes(filter);
+      const okQ=!q||txt.includes(q);
+      const show=okCat&&okQ;
+      card.classList.toggle('hidden',!show);
+      if(show) visible++;
+    });
+    syncAccordions(q,source);
+    if(result) result.textContent=visible;
+    if(no) no.classList.toggle('visible',visible===0);
+  }
+
+  search?.addEventListener('input',()=>run('search'));
+
+  chips.forEach(btn=>btn.addEventListener('click',()=>{
+    chips.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    filter=btn.dataset.cat||'all';
+    run('filter');
+  }));
+
+  accordions.forEach(acc=>acc.addEventListener('toggle',()=>{
+    if(acc.open){
+      userOpenedCategory=true;
+      accordions.forEach(other=>{if(other!==acc)other.open=false;});
+    }
+  }));
+
+  closeAll();
+  run('init');
+}
 function setDocsValue(docsSelect, requested){
   if(!docsSelect||!requested)return;
   const d=String(requested).toLowerCase();
