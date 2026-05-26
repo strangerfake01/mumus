@@ -6,7 +6,25 @@ const FORM_TEXT={
   hu:{gdpr:'Kérjük, fogadja el az adatkezelési hozzájárulást.',disc:'Kérjük, vegye tudomásul a termékdokumentációs nyilatkozatot.',sending:'Küldés…',sent:'Köszönjük — megkeresése elküldve. 1–2 munkanapon belül válaszolunk.',mailto:'Az e-mail-kliens előre kitöltött üzenettel megnyílt.',fail:'Az űrlapot nem sikerült automatikusan elküldeni. Az e-mail-kliens megnyílt.'},
   'de-at':{gdpr:'Bitte stimmen Sie der Datenschutz-Einwilligung zu.',disc:'Bitte bestätigen Sie den Produktdokumentations-Hinweis.',sending:'Wird gesendet…',sent:'Vielen Dank — Ihre Anfrage wurde gesendet. Wir melden uns innerhalb von 1–2 Werktagen.',mailto:'Ihr E-Mail-Programm wurde mit einer vorausgefüllten Nachricht geöffnet.',fail:'Das Formular konnte nicht automatisch gesendet werden. Ihr E-Mail-Programm wurde geöffnet.'}
 };
-function initNav(){const t=document.getElementById('navToggle'),n=document.getElementById('siteNav');if(!t||!n)return;const setOpen=o=>{n.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false')};t.addEventListener('click',()=>setOpen(!n.classList.contains('open')));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));document.addEventListener('click',e=>{if(!t.contains(e.target)&&!n.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});}
+function initNav(){
+  const t=document.getElementById('navToggle');
+  const n=document.getElementById('siteNav');
+  const h=document.querySelector('.site-header');
+  if(h){h.classList.remove('header-hidden','is-hidden');h.removeAttribute('data-hidden');}
+  if(!t||!n)return;
+  const setOpen=(open)=>{
+    n.classList.toggle('open',!!open);
+    t.classList.toggle('active',!!open);
+    t.setAttribute('aria-expanded',open?'true':'false');
+    document.documentElement.classList.toggle('nav-open',!!open);
+  };
+  t.addEventListener('click',(e)=>{e.preventDefault();setOpen(!n.classList.contains('open'));});
+  n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('click',e=>{if(!t.contains(e.target)&&!n.contains(e.target))setOpen(false);});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('scroll',()=>{if(h){h.classList.remove('header-hidden','is-hidden');h.removeAttribute('data-hidden');}}, {passive:true});
+  setInterval(()=>{if(h){h.classList.remove('header-hidden','is-hidden');h.removeAttribute('data-hidden');}},500);
+}
 function initCookieBanner(){const b=document.getElementById('cookieBanner'),ok=document.getElementById('cookieOk');if(!b)return;if(localStorage.getItem('rmt_cookie'))return;setTimeout(()=>b.classList.add('visible'),700);ok&&ok.addEventListener('click',()=>{localStorage.setItem('rmt_cookie','essential');b.classList.remove('visible')});}
 function initFAQ(){document.querySelectorAll('.faq-item').forEach(item=>{item.querySelector('.faq-q')?.addEventListener('click',()=>{const o=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!o)item.classList.add('open');});});}
 function initCatalogue(){
@@ -17,60 +35,13 @@ function initCatalogue(){
   const result=document.getElementById('resultCount');
   const no=document.getElementById('noResults');
   let filter='all';
-  let userOpenedCategory=false;
-
-  function closeAll(){
-    accordions.forEach(cat=>{cat.open=false;});
-  }
-
-  function visibleCardsIn(cat){
-    return [...cat.querySelectorAll('.product-card')].filter(card=>!card.classList.contains('hidden'));
-  }
-
-  function syncAccordions(query, source){
-    let visible=0;
-    let firstVisible=null;
-
-    accordions.forEach(cat=>{
-      const hasVisible=!!cat.querySelector('.product-card:not(.hidden)');
-      cat.style.display=hasVisible?'':'none';
-      if(hasVisible && !firstVisible) firstVisible=cat;
-      if(!hasVisible) cat.open=false;
-    });
-
-    if(source==='filter'){
-      closeAll();
-      if(filter!=='all'){
-        const target=accordions.find(cat=>(cat.dataset.category||'')===filter && cat.style.display!=='none');
-        if(target){
-          target.open=true;
-          userOpenedCategory=true;
-          target.scrollIntoView({behavior:'smooth',block:'nearest'});
-        }
-      }else{
-        userOpenedCategory=false;
-      }
-      return;
-    }
-
-    if(source==='search'){
-      if(query){
-        accordions.forEach(cat=>{ if(cat.style.display!=='none') cat.open=true; });
-      }else if(!userOpenedCategory){
-        closeAll();
-      }
-      return;
-    }
-
-    // Initial state: all product categories stay collapsed.
-    closeAll();
-  }
-
-  function run(source='init'){
+  function closeAll(){accordions.forEach(cat=>{cat.open=false;});}
+  function openOnly(target){accordions.forEach(cat=>{cat.open=(cat===target);});}
+  function applyVisibility(){
     const q=(search?.value||'').toLowerCase().trim();
     let visible=0;
     cards.forEach(card=>{
-      const txt=(card.dataset.name||'').toLowerCase();
+      const txt=(card.dataset.name||card.textContent||'').toLowerCase();
       const cats=(card.dataset.categories||'').split(/\s+/);
       const okCat=filter==='all'||cats.includes(filter);
       const okQ=!q||txt.includes(q);
@@ -78,28 +49,39 @@ function initCatalogue(){
       card.classList.toggle('hidden',!show);
       if(show) visible++;
     });
-    syncAccordions(q,source);
+    accordions.forEach(cat=>{
+      const hasVisible=!!cat.querySelector('.product-card:not(.hidden)');
+      cat.style.display=hasVisible?'':'none';
+      if(!hasVisible) cat.open=false;
+    });
     if(result) result.textContent=visible;
     if(no) no.classList.toggle('visible',visible===0);
+    return {q,visible};
   }
-
+  function run(source='init'){
+    const state=applyVisibility();
+    if(source==='init') closeAll();
+    if(source==='filter'){
+      if(filter==='all'){closeAll();return;}
+      const target=accordions.find(cat=>(cat.dataset.category||'')===filter && cat.style.display!=='none');
+      if(target){openOnly(target);target.scrollIntoView({behavior:'smooth',block:'nearest'});} else closeAll();
+      return;
+    }
+    if(source==='search'){
+      // Keep category accordions closed while searching; they open only by explicit user category click.
+      closeAll();
+    }
+  }
   search?.addEventListener('input',()=>run('search'));
-
   chips.forEach(btn=>btn.addEventListener('click',()=>{
     chips.forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     filter=btn.dataset.cat||'all';
     run('filter');
   }));
-
   accordions.forEach(acc=>acc.addEventListener('toggle',()=>{
-    if(acc.open){
-      userOpenedCategory=true;
-      accordions.forEach(other=>{if(other!==acc)other.open=false;});
-    }
+    if(acc.open) accordions.forEach(other=>{if(other!==acc)other.open=false;});
   }));
-
-  closeAll();
   run('init');
 }
 function setDocsValue(docsSelect, requested){
