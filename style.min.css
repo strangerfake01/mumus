@@ -2365,3 +2365,153 @@ html body .site-header[data-hidden="true"]{
     border-radius:16px;
   }
 }
+
+
+/* ============================================================
+   Hero image + hover video media layer — optimized for GitHub Pages
+   ============================================================ */
+.hero.has-hover-media{
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden;
+  background:#071829!important;
+}
+.hero.has-hover-media::before{
+  z-index:1!important;
+  opacity:.58!important;
+}
+.hero.has-hover-media .hero-pattern{
+  z-index:2!important;
+}
+.hero.has-hover-media .container{
+  position:relative;
+  z-index:3!important;
+}
+.hero-media{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  background:#071829;
+  pointer-events:none;
+}
+.hero-media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  background:
+    linear-gradient(90deg,rgba(5,18,32,.92) 0%,rgba(5,18,32,.75) 31%,rgba(5,18,32,.42) 58%,rgba(5,18,32,.52) 100%),
+    radial-gradient(circle at 22% 22%,rgba(34,211,238,.10),transparent 44%);
+}
+.hero-poster,
+.hero-poster img,
+.hero-hover-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+.hero-poster img,
+.hero-hover-video{
+  object-fit:cover;
+  object-position:center center;
+}
+.hero-poster{
+  z-index:1;
+  opacity:1;
+  transition:opacity .55s ease;
+}
+.hero-hover-video{
+  z-index:2;
+  opacity:0;
+  transition:opacity .55s ease;
+  filter:saturate(1.03) contrast(1.02);
+}
+@media (hover:hover) and (pointer:fine){
+  .hero.has-hover-media:hover .hero-hover-video{opacity:.96;}
+  .hero.has-hover-media:hover .hero-poster{opacity:0;}
+}
+.hero.has-hover-media.hero-video-active .hero-hover-video{opacity:.96;}
+.hero.has-hover-media.hero-video-active .hero-poster{opacity:0;}
+.hero.has-hover-media .hero-content{
+  text-shadow:0 2px 18px rgba(0,0,0,.24);
+}
+.hero.has-hover-media .hero-brand-mark img{
+  filter:drop-shadow(0 12px 24px rgba(0,0,0,.26));
+}
+@media(max-width:900px){
+  .hero-media::after{
+    background:linear-gradient(180deg,rgba(5,18,32,.90) 0%,rgba(5,18,32,.78) 48%,rgba(5,18,32,.84) 100%);
+  }
+  .hero-poster img,
+  .hero-hover-video{object-position:center center;}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-hover-video{display:none!important;}
+  .hero-poster{opacity:1!important;}
+}
+
+/* ============================================================
+   Global hero parallax — desktop only, performance safe
+   ============================================================ */
+.hero-parallax-enabled{
+  --hero-parallax-y:0px;
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+}
+.hero-parallax-enabled .hero-media{
+  top:-7%;
+  bottom:-7%;
+  height:auto;
+  transform:translate3d(0,var(--hero-parallax-y),0) scale(1.06);
+  will-change:transform;
+  transition:transform .08s linear;
+}
+.hero-parallax-enabled .hero-pattern{
+  transform:translate3d(0,calc(var(--hero-parallax-y) * .38),0);
+  will-change:transform;
+}
+.product-hero-rich.hero-parallax-enabled,
+.product-hero-detail.hero-parallax-enabled,
+.ai-profile-hero.hero-parallax-enabled{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+}
+.product-hero-rich.hero-parallax-enabled::before,
+.product-hero-detail.hero-parallax-enabled::before,
+.ai-profile-hero.hero-parallax-enabled::before,
+.hero.hero-parallax-enabled:not(.has-hover-media)::after{
+  content:"";
+  position:absolute;
+  inset:-12% -4%;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 78% 20%,rgba(34,211,238,.20),transparent 32%),
+    radial-gradient(circle at 18% 82%,rgba(21,101,192,.18),transparent 36%),
+    linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,0));
+  transform:translate3d(0,calc(var(--hero-parallax-y) * .72),0) scale(1.04);
+  will-change:transform;
+}
+.product-hero-rich.hero-parallax-enabled > .container,
+.product-hero-detail.hero-parallax-enabled > .container,
+.ai-profile-hero.hero-parallax-enabled > .container,
+.hero.hero-parallax-enabled:not(.has-hover-media) > .container{
+  position:relative;
+  z-index:2;
+}
+@media(max-width:899px), (prefers-reduced-motion:reduce){
+  .hero-parallax-enabled .hero-media,
+  .hero-parallax-enabled .hero-pattern,
+  .product-hero-rich.hero-parallax-enabled::before,
+  .product-hero-detail.hero-parallax-enabled::before,
+  .ai-profile-hero.hero-parallax-enabled::before,
+  .hero.hero-parallax-enabled:not(.has-hover-media)::after{
+    transform:none!important;
+    will-change:auto!important;
+  }
+}

@@ -294,5 +294,61 @@ function initCategoryVisualState(){
   });
 }
 
+
+function initHeroHoverVideo(){
+  const canHover = window.matchMedia && window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if(!canHover) return;
+  document.querySelectorAll('.hero[data-hero-hover="true"]').forEach(hero=>{
+    const video = hero.querySelector('.hero-hover-video');
+    if(!video) return;
+    let prepared=false;
+    const start=()=>{
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      hero.classList.add('hero-video-active');
+      if(!prepared){ video.load(); prepared=true; }
+      const p=video.play();
+      if(p && typeof p.catch==='function') p.catch(()=>{});
+    };
+    const stop=()=>{
+      hero.classList.remove('hero-video-active');
+      video.pause();
+      try{ video.currentTime=0; }catch(e){}
+    };
+    hero.addEventListener('pointerenter', start, {passive:true});
+    hero.addEventListener('pointerleave', stop, {passive:true});
+    hero.addEventListener('focusin', start);
+    hero.addEventListener('focusout', stop);
+  });
+}
+
+
+function initHeroParallax(){
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const desktop = window.matchMedia && window.matchMedia('(min-width: 900px)').matches;
+  if(reduce || !desktop) return;
+  const heroes=[...document.querySelectorAll('.hero, .product-hero-rich, .product-hero-detail, .ai-profile-hero')]
+    .filter(el=>!el.closest('header, footer'));
+  if(!heroes.length) return;
+  heroes.forEach(el=>el.classList.add('hero-parallax-enabled'));
+  let ticking=false;
+  const update=()=>{
+    const vh=window.innerHeight || document.documentElement.clientHeight || 900;
+    heroes.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.bottom < -80 || r.top > vh + 80) return;
+      const center=r.top + r.height/2;
+      const progress=(center - vh/2) / vh;
+      const depth=el.classList.contains('has-hover-media') ? 34 : 22;
+      const y=Math.max(-42, Math.min(42, progress * -depth));
+      el.style.setProperty('--hero-parallax-y', y.toFixed(2)+'px');
+    });
+    ticking=false;
+  };
+  const request=()=>{ if(!ticking){ ticking=true; window.requestAnimationFrame(update); } };
+  update();
+  window.addEventListener('scroll', request, {passive:true});
+  window.addEventListener('resize', request, {passive:true});
+}
+
 function initSmoothScroll(){document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id&&id.length>1){const el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}}}));}
-document.addEventListener('DOMContentLoaded',()=>{initNav();initCookieBanner();initFAQ();initCatalogue();initProductPrefill();initQueryPrefill();initCertificateModals();initCategoryVisualState();initForm();initSmoothScroll();});
+document.addEventListener('DOMContentLoaded',()=>{initNav();initCookieBanner();initFAQ();initCatalogue();initProductPrefill();initQueryPrefill();initCertificateModals();initCategoryVisualState();initHeroHoverVideo();initHeroParallax();initForm();initSmoothScroll();});
