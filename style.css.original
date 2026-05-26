@@ -541,15 +541,15 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .site-nav{flex:1 1 auto;justify-content:flex-end;min-width:0;gap:.18rem}
 .site-nav a,
 .lang-switcher a{
-  white-space:nowrap;
-  word-break:keep-all;
+  white-space:nowrap!important;
+  word-break:keep-all!important;
   overflow-wrap:normal!important;
-  hyphens:none;
+  hyphens:none!important;
   line-height:1.12!important;
   text-align:center;
 }
 .site-nav a{flex:0 0 auto;padding:.45rem .62rem;font-size:.82rem}
-.lang-switcher{flex:0 0 auto;align-items:center;flex-wrap:nowrap;min-width:max-content}
+.lang-switcher{flex:0 0 auto;align-items:center;flex-wrap:nowrap!important;min-width:max-content}
 .lang-switcher a{
   display:inline-flex!important;
   align-items:center;
@@ -562,7 +562,7 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 @media(max-width:1320px){
   .site-nav{display:none!important;position:fixed;top:var(--header-h);left:0;right:0;max-height:calc(100vh - var(--header-h));overflow:auto;background:var(--white);border-bottom:1px solid var(--grey-200);flex-direction:column;align-items:stretch;justify-content:flex-start;padding:1rem;gap:.25rem;box-shadow:var(--shadow-md);z-index:199}
   .site-nav.open{display:flex!important}
-  .site-nav a{width:100%;padding:.82rem 1rem;font-size:.98rem;text-align:left;white-space:normal;overflow-wrap:break-word;word-break:normal;hyphens:none}
+  .site-nav a{width:100%;padding:.82rem 1rem;font-size:.98rem;text-align:left;white-space:normal!important;overflow-wrap:break-word!important;word-break:normal!important;hyphens:none!important}
   .nav-toggle{display:flex!important;flex:0 0 auto}
 }
 @media(min-width:1321px){
@@ -589,11 +589,11 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .cert-float-body span{
   min-width:0;
   white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
 }
-.cert-valid{margin-left:0!important;justify-self:end;align-self:center;flex:0 0 auto;white-space:nowrap}
+.cert-valid{margin-left:0!important;justify-self:end;align-self:center;flex:0 0 auto;white-space:nowrap!important}
 @media(max-width:520px){
   .cert-float{grid-template-columns:40px minmax(0,1fr);max-width:100%}
   .cert-valid{grid-column:2;justify-self:start;margin-top:.25rem}
@@ -603,8 +603,8 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .cert-block{min-width:0;overflow:hidden}
 .cert-block-top{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:.85rem;align-items:start}
 .cert-block-top>div{min-width:0}
-.cert-name,.cert-scope{word-break:normal;overflow-wrap:break-word;hyphens:none}
-.cert-valid-badge{white-space:nowrap;flex:0 0 auto;justify-self:end;align-self:start;line-height:1.1}
+.cert-name,.cert-scope{word-break:normal!important;overflow-wrap:break-word!important;hyphens:none!important}
+.cert-valid-badge{white-space:nowrap!important;flex:0 0 auto;justify-self:end;align-self:start;line-height:1.1}
 .cert-meta-row{
   display:grid!important;
   grid-template-columns:minmax(120px,.42fr) minmax(0,1fr);
@@ -612,8 +612,8 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   align-items:start;
   line-height:1.35;
 }
-.cert-meta-row span{min-width:0;word-break:normal;overflow-wrap:normal!important;hyphens:none}
-.cert-meta-row strong{min-width:0;text-align:left;word-break:normal;overflow-wrap:anywhere;hyphens:none}
+.cert-meta-row span{min-width:0;word-break:normal!important;overflow-wrap:normal!important;hyphens:none!important}
+.cert-meta-row strong{min-width:0;text-align:left;word-break:normal!important;overflow-wrap:anywhere!important;hyphens:none!important}
 @media(max-width:520px){
   .cert-block-top{grid-template-columns:1fr;gap:.55rem}
   .cert-valid-badge{justify-self:start}
@@ -627,14 +627,14 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .identity-list div{min-width:0}
 .identity-list dt,
 .identity-list dd{
-  word-break:normal;
+  word-break:normal!important;
   overflow-wrap:normal!important;
-  hyphens:none;
-  white-space:normal;
+  hyphens:none!important;
+  white-space:normal!important;
 }
 @media(max-width:520px){
   .identity-list{grid-template-columns:1fr}
-  .identity-list dd{overflow-wrap:break-word}
+  .identity-list dd{overflow-wrap:break-word!important}
 }
 
 /* Contact details and LinkedIn chips: keep names and roles readable. */
@@ -642,12 +642,12 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .contact-person-name *,
 .contact-role,
 .linkedin-profile-link{
-  word-break:normal;
+  word-break:normal!important;
   overflow-wrap:normal!important;
-  hyphens:none;
+  hyphens:none!important;
 }
 .contact-person-name a{text-decoration:none}
-.linkedin-profile-link:hover{text-decoration:none}
+.linkedin-profile-link:hover{text-decoration:none!important}
 
 /* ============================================================
    Product accordion content hardening — fixes reported 2026-05-26
@@ -663,7 +663,7 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 }
 .sub-accordion,
 .rich-accordion{
-  overflow:visible;
+  overflow:visible!important;
 }
 .sub-accordion summary,
 .rich-accordion summary{
@@ -672,11 +672,11 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   justify-content:space-between;
   gap:.75rem;
   min-width:0;
-  white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
-  line-height:1.25;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
+  line-height:1.25!important;
 }
 .sub-accordion > a.btn,
 .rich-accordion > a.btn,
@@ -685,11 +685,11 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   max-width:calc(100% - 1.8rem)!important;
   width:auto;
   margin:.85rem .9rem .35rem;
-  white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
-  line-height:1.25;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
+  line-height:1.25!important;
   text-align:center;
   justify-content:center;
   align-items:center;
@@ -702,10 +702,10 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   padding:0 .9rem .95rem;
   margin:0!important;
   max-width:100%;
-  white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
   line-height:1.45!important;
 }
 .sub-accordion > a.btn + p.microcopy,
@@ -744,12 +744,12 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .btn-row .btn,
 .product-prefill,
 .product-detail-link{
-  max-width:100%;
-  white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
-  line-height:1.25;
+  max-width:100%!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
+  line-height:1.25!important;
   text-align:center;
 }
 .product-cta-row,
@@ -763,13 +763,13 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 :where(.btn, button, input[type="submit"], input[type="button"], summary, .filter-btn, .filter-chip,
 .product-prefill, .product-detail-link, .cert-link, .chip, .trust-chip, .tag, .product-badge,
 .cas-pill, .doc-pill, .linkedin-profile-link, .btn-ck){
-  max-width:100%;
-  min-width:0;
-  white-space:normal;
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
-  line-height:1.25;
+  max-width:100%!important;
+  min-width:0!important;
+  white-space:normal!important;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
+  line-height:1.25!important;
   text-wrap:balance;
 }
 
@@ -786,10 +786,10 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .lang-switcher a,
 .nav-toggle,
 .nav-toggle span{
-  white-space:nowrap;
+  white-space:nowrap!important;
   overflow-wrap:normal!important;
-  word-break:keep-all;
-  hyphens:none;
+  word-break:keep-all!important;
+  hyphens:none!important;
   text-wrap:nowrap;
 }
 
@@ -800,11 +800,11 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .product-details, .product-summary, .product-content, .product-summary-panel, .decision-card,
 .related-section, .related-product, .inquiry-sticky, .rich-sticky-panel, .sub-accordion,
 .rich-accordion, .category-accordion, .catalogue-sidebar, .footer-brand, .footer-col){
-  min-width:0;
-  max-width:100%;
+  min-width:0!important;
+  max-width:100%!important;
   overflow-wrap:break-word;
-  word-break:normal;
-  hyphens:none;
+  word-break:normal!important;
+  hyphens:none!important;
 }
 
 /* Text itself: never use automatic hyphenation that creates ugly HU/DE line breaks. */
@@ -812,18 +812,18 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .prod-name,.prod-desc,.prod-grades,.product-title-block,.product-title-block h3,
 .product-hero-copy h1,.product-lead,.microcopy,.category-summary h3,.related-product span,
 .contact-detail,.contact-person-name,.contact-role,.footer-brand p,.footer-col a){
-  word-break:normal;
-  overflow-wrap:break-word;
-  hyphens:none;
+  word-break:normal!important;
+  overflow-wrap:break-word!important;
+  hyphens:none!important;
 }
 
 /* Technical strings may break only when absolutely necessary to avoid overflow. */
 :where(.mono,.prod-cas,.cas-pill,.doc-pill,.cert-meta-row strong,.identity-list dd,
 .contact-detail a[href^="mailto:"],.contact-detail a[href^="tel:"],.form-control,
 .product-dl dd,.legal-page a){
-  overflow-wrap:anywhere;
-  word-break:normal;
-  hyphens:none;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  hyphens:none!important;
 }
 
 /* Avoid narrow stat/company cells that caused vertical text on mid-width layouts. */
@@ -839,7 +839,7 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))!important;
 }
 .identity-list div{
-  min-width:0;
+  min-width:0!important;
 }
 
 /* Product/catalogue buttons and details: keep button text inside the visible card. */
@@ -853,8 +853,8 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
   display:flex;
   flex-wrap:wrap;
   gap:.55rem;
-  min-width:0;
-  max-width:100%;
+  min-width:0!important;
+  max-width:100%!important;
 }
 .side-cta,
 .exporttag-cta{display:grid}
@@ -865,7 +865,7 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 .prod-actions .btn,
 .hero-cta .btn,
 .exporttag-cta .btn{
-  max-width:100%;
+  max-width:100%!important;
 }
 
 /* Keep accordion/link microcopy inside the rounded white box on every language. */
@@ -890,7 +890,7 @@ footer .linkedin-profile-link:hover,.quality-section .linkedin-profile-link:hove
 /* Tables and definition lists: no horizontal page overflow on mobile. */
 :where(table,.product-dl,.identity-list,.category-notes,.industry-use,.category-context){
   max-width:100%;
-  min-width:0;
+  min-width:0!important;
 }
 table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
 .product-dl div,
@@ -931,8 +931,8 @@ table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
   display:block!important;
   position:relative;
   padding-left:1.55rem;
-  min-width:0;
-  max-width:100%;
+  min-width:0!important;
+  max-width:100%!important;
   line-height:1.5!important;
 }
 .form-check input[type="checkbox"]{
@@ -944,22 +944,22 @@ table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
 .form-check a,
 .form-check .req{
   display:inline!important;
-  white-space:normal;
-  overflow-wrap:break-word;
-  word-break:normal;
-  hyphens:none;
+  white-space:normal!important;
+  overflow-wrap:break-word!important;
+  word-break:normal!important;
+  hyphens:none!important;
 }
 .form-check .req{overflow-wrap:normal!important}
 
 .category-summary{
-  min-width:0;
+  min-width:0!important;
 }
 .category-summary .cat-count,
 .cat-count{
-  white-space:nowrap;
+  white-space:nowrap!important;
   overflow-wrap:normal!important;
-  word-break:keep-all;
-  hyphens:none;
+  word-break:keep-all!important;
+  hyphens:none!important;
   flex:0 0 auto;
 }
 
@@ -970,7 +970,7 @@ table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
     display:grid!important;
     grid-template-columns:minmax(0,1fr)!important;
     width:100%!important;
-    max-width:100%;
+    max-width:100%!important;
     gap:1rem!important;
   }
   .product-hero-copy,
@@ -979,13 +979,13 @@ table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
   .rich-sticky-panel,
   .product-summary-panel{
     width:100%!important;
-    max-width:100%;
-    min-width:0;
+    max-width:100%!important;
+    min-width:0!important;
   }
   .product-hero-rich .btn-row,
   .product-hero-rich .btn-row .btn{
     width:100%!important;
-    max-width:100%;
+    max-width:100%!important;
   }
 }
 

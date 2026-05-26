@@ -1,4 +1,6 @@
 # Raw Materials Trade Kft. — B2B-readable company profile
+Last-Updated: 2026-05-26
+Version: 1.2
 
 ## Canonical entity
 Name: Raw Materials Trade Kft.
