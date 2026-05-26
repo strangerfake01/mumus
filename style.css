@@ -1530,3 +1530,292 @@ footer{padding:3.4rem 0 2.1rem;background:#071829}.footer-logo{height:52px;max-w
   transform: translateY(-100%) !important;
   box-shadow: none !important;
 }
+
+/* ============================================================
+   UX refinement pass — 2026-05-26 (menu, certificates, catalogue, hero)
+   ============================================================ */
+/* Fixed translucent header: keep visible during scroll */
+.site-header{
+  position:sticky !important;
+  top:0;
+  z-index:400 !important;
+  background:rgba(248,250,252,.82) !important;
+  backdrop-filter:saturate(150%) blur(14px);
+  -webkit-backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid rgba(207,220,232,.92) !important;
+}
+.site-header.header-hidden{
+  transform:none !important;
+  box-shadow:inherit !important;
+}
+
+/* Remove automatic hyphenation across the site, especially in heroes */
+body *,
+.hero h1,.hero-lead,.product-hero-copy h1,.product-hero-copy .lead,
+.section-header h1,.section-header h2,.section-header p,
+.exporttag-panel h2,.exporttag-panel p{
+  hyphens:none !important;
+  -webkit-hyphens:none !important;
+  -ms-hyphens:none !important;
+  word-break:normal !important;
+  overflow-wrap:break-word;
+}
+.hero h1,.hero-lead,.product-hero-copy h1,.product-hero-copy .lead{
+  max-width:100%;
+}
+
+/* Hero typography ~25% smaller */
+.hero h1{
+  font-size:clamp(1.68rem,4vw,3.1rem) !important;
+  line-height:1.10 !important;
+}
+.hero-lead{
+  font-size:clamp(.92rem,1.08vw,1rem) !important;
+  line-height:1.62 !important;
+}
+.product-hero-copy h1{
+  font-size:clamp(1.65rem,3vw,2.75rem) !important;
+  line-height:1.12 !important;
+}
+.product-hero-copy .lead{
+  font-size:clamp(.92rem,1vw,1rem) !important;
+  line-height:1.62 !important;
+}
+@media(max-width:760px){
+  .hero h1{font-size:clamp(1.62rem,8vw,2.45rem) !important;}
+  .hero-lead{font-size:.96rem !important;}
+  .product-hero-copy h1{font-size:clamp(1.5rem,7vw,2.05rem) !important;}
+  .product-hero-copy .lead{font-size:.93rem !important;}
+}
+
+/* Compact Exporttag block to remove excess whitespace */
+.exporttag-section{
+  padding-top:2.6rem !important;
+  padding-bottom:2.8rem !important;
+}
+.exporttag-panel{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+  background:linear-gradient(180deg,#f8fbfd 0%,#f3f7fa 100%);
+  border:1px solid #dbe7ef;
+  border-radius:28px;
+  padding:2rem 2.2rem;
+  box-shadow:0 18px 44px rgba(13,42,69,.08);
+}
+.exporttag-panel h2{
+  margin:.45rem 0 .8rem;
+  color:#0d2035;
+  font-size:clamp(1.75rem,3vw,2.7rem);
+  letter-spacing:-.035em;
+}
+.exporttag-panel .lead,
+.exporttag-panel p{
+  color:#536577;
+  max-width:60ch;
+  margin:0;
+}
+.exporttag-label{
+  color:#22c1e8;
+  font-size:.88rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+@media(max-width:760px){
+  .exporttag-panel{padding:1.45rem 1.2rem;border-radius:22px;}
+  .exporttag-panel h2{font-size:clamp(1.45rem,7.4vw,2.05rem);}
+}
+
+/* Certificate evidence: button-first layout + modal viewer */
+.certificate-evidence{
+  align-items:stretch;
+}
+.certificate-evidence-card.compact-certificate{
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.16);
+  padding:1.15rem 1.1rem;
+  gap:.9rem;
+}
+.certificate-evidence-card.compact-certificate h3{margin:0;color:#fff;}
+.certificate-evidence-card.compact-certificate p{margin:0;color:rgba(255,255,255,.76);}
+.certificate-evidence-card.compact-certificate::before{
+  content:'Licence';
+  align-self:flex-start;
+  display:inline-flex;
+  padding:.34rem .65rem;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.14);
+  color:#d9f6ff;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.certificate-evidence-card.compact-certificate .cert-actions{margin-top:.1rem;}
+.certificate-evidence-card.compact-certificate .btn{min-width:200px;}
+
+.cert-modal{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1.4rem;
+  background:rgba(6,17,31,.72);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .22s ease;
+  z-index:9999;
+}
+.cert-modal.open{opacity:1;pointer-events:auto;}
+.cert-modal-dialog{
+  position:relative;
+  width:min(92vw,980px);
+  max-height:92vh;
+  background:#fff;
+  border-radius:20px;
+  padding:1rem;
+  box-shadow:0 26px 70px rgba(0,0,0,.28);
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
+}
+.cert-modal-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.cert-modal-title{font-weight:900;color:#0d2035;font-size:1rem;}
+.cert-modal-close{
+  appearance:none;border:0;background:#eef4f8;color:#0d2035;border-radius:999px;
+  width:38px;height:38px;font-size:1.35rem;line-height:1;cursor:pointer;
+}
+.cert-modal-body{overflow:auto;border-radius:14px;background:#f7fafc;border:1px solid #e3edf5;padding:.75rem;}
+.cert-modal-body img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;margin:0 auto;background:#fff;border-radius:10px;}
+
+/* Rich accordion paragraphs: same inner spacing as other panels */
+.rich-accordion > p:not(.microcopy),
+.sub-accordion > p:not(.microcopy){
+  padding:0 .95rem .95rem;
+  margin:0;
+  line-height:1.48;
+  color:#526273;
+}
+
+/* Make the catalogue behaviour clearer */
+.category-summary::-webkit-details-marker,
+.product-summary::-webkit-details-marker,
+.sub-accordion summary::-webkit-details-marker,
+.rich-accordion summary::-webkit-details-marker{display:none;}
+.category-summary,.product-summary,.sub-accordion summary,.rich-accordion summary{list-style:none;}
+
+
+/* ============================================================
+   FINAL VISUAL QA PASS — 2026-05-26
+   Desktop + mobile polish, fixed transparent navigation, compact cards,
+   stable catalogue accordions, no automatic word hyphenation.
+   ============================================================ */
+html{scroll-padding-top:calc(var(--header-h) + 18px)}
+body{overflow-x:hidden}
+.site-header{
+  position:sticky !important;
+  top:0 !important;
+  z-index:500 !important;
+  background:rgba(250,252,255,.78) !important;
+  -webkit-backdrop-filter:saturate(160%) blur(16px);
+  backdrop-filter:saturate(160%) blur(16px);
+  border-bottom:1px solid rgba(214,226,237,.86) !important;
+  box-shadow:0 8px 26px rgba(13,42,69,.055) !important;
+}
+.site-header.header-hidden{transform:none !important;box-shadow:0 8px 26px rgba(13,42,69,.055) !important}
+.site-nav a,.lang-switcher a{white-space:nowrap;hyphens:none !important;word-break:normal !important;overflow-wrap:normal !important}
+@media(max-width:980px){
+  .site-nav{background:rgba(250,252,255,.96) !important;-webkit-backdrop-filter:saturate(150%) blur(16px);backdrop-filter:saturate(150%) blur(16px)}
+}
+
+/* No browser-created hyphen breaks */
+h1,h2,h3,h4,h5,p,li,a,span,button,label,summary,dt,dd,.lead,.hero-lead,.product-hero-copy .lead,.product-hero-copy h1,.hero h1{
+  -webkit-hyphens:none !important;
+  -ms-hyphens:none !important;
+  hyphens:none !important;
+  word-break:normal !important;
+}
+.hero h1,.hero-lead,.product-hero-copy h1,.product-hero-copy .lead,.section-header .lead{
+  overflow-wrap:normal !important;
+}
+@media(max-width:560px){
+  .hero h1,.hero-lead,.product-hero-copy h1,.product-hero-copy .lead{overflow-wrap:break-word !important}
+}
+
+/* Hero text made lighter and smaller without losing hierarchy */
+.hero{padding:clamp(3rem,5.8vw,4.6rem) 0 clamp(2.8rem,4.6vw,4rem) !important}
+.hero h1{font-size:clamp(1.6rem,3.8vw,3rem) !important;line-height:1.10 !important;max-width:13em !important}
+.hero-lead{font-size:clamp(.9rem,1.05vw,.99rem) !important;line-height:1.63 !important;max-width:62ch !important}
+.product-hero-rich{padding:clamp(3rem,5vw,4.55rem) 0 clamp(2.55rem,4vw,3.8rem) !important}
+.product-hero-copy h1{font-size:clamp(1.55rem,2.75vw,2.62rem) !important;line-height:1.12 !important}
+.product-hero-copy .lead{font-size:clamp(.9rem,1vw,.99rem) !important;line-height:1.62 !important}
+
+/* Exporttag section is intentionally removed from the HTML. Keep this as a safety fallback. */
+#exporttag,.exporttag-section{display:none !important}
+
+/* Certificate cards: compact, no stretched A4 canvas */
+.certificate-evidence{grid-template-columns:repeat(2,minmax(260px,1fr));gap:1rem;margin-top:1.4rem}
+.certificate-evidence-card.compact-certificate{
+  min-height:0 !important;
+  padding:1.05rem 1.1rem !important;
+  border-radius:20px !important;
+  background:rgba(255,255,255,.07) !important;
+}
+.certificate-evidence-card.compact-certificate::before{content:'CERTIFICATE';letter-spacing:.1em}
+.certificate-evidence-card.compact-certificate h3{font-size:1.02rem !important;line-height:1.25 !important;margin:0 !important}
+.certificate-evidence-card.compact-certificate p{font-size:.82rem !important;line-height:1.5 !important;max-width:68ch}
+.certificate-evidence-card.compact-certificate .cert-actions .btn{width:auto !important;min-width:190px;border-color:rgba(255,255,255,.34) !important}
+@media(max-width:760px){
+  .certificate-evidence{grid-template-columns:1fr;gap:.85rem}
+  .certificate-evidence-card.compact-certificate .cert-actions .btn{width:100% !important}
+}
+.cert-modal-dialog{width:min(94vw,860px) !important;padding:.85rem !important}
+.cert-modal-body{max-height:82vh}
+.cert-modal-body img{width:auto !important;max-width:100% !important;max-height:76vh !important}
+
+/* Catalogue desktop balance */
+.catalogue-layout{grid-template-columns:minmax(230px,280px) minmax(0,1fr) !important;gap:1.35rem !important}
+.catalogue-sidebar{top:calc(var(--header-h) + 20px) !important;padding:1rem !important}
+.filter-chips{display:grid !important;grid-template-columns:1fr !important;gap:.5rem !important}
+.filter-chip{width:100%;text-align:center;line-height:1.25;padding:.62rem .75rem !important}
+.category-summary{padding:1rem 1.15rem !important}
+.category-summary::after{content:'+';font-weight:900;color:var(--blue);font-size:1.25rem;line-height:1;flex:0 0 auto}
+.category-accordion[open] .category-summary::after,.category-summary.open::after{content:'–'}
+.category-summary .cat-count{margin-left:auto;padding-right:.5rem;white-space:nowrap}
+.category-intelligence{padding:.95rem 1.1rem !important}
+.layered-grid{padding:.95rem 1.1rem 1.1rem !important;gap:.75rem !important}
+@media(max-width:980px){
+  .catalogue-layout{grid-template-columns:1fr !important}
+  .catalogue-sidebar{position:static !important;display:grid;gap:.8rem}
+  .filter-chips{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media(max-width:560px){
+  .filter-chips{grid-template-columns:1fr !important}
+  .catalogue-warning{font-size:.82rem;line-height:1.55;padding:.85rem .9rem !important}
+  .category-summary{align-items:flex-start !important}
+  .category-summary .cat-count{font-size:.78rem}
+}
+
+/* Product detail accordions: tighter readable content, matching closed panels */
+.rich-accordion,.sub-accordion{border-radius:14px !important;margin:.55rem 0 !important;overflow:hidden !important}
+.rich-accordion summary,.sub-accordion summary{padding:.78rem .9rem !important;min-height:44px}
+.rich-accordion > p:not(.microcopy),.sub-accordion > p:not(.microcopy){padding:0 .9rem .9rem !important;max-width:68ch;line-height:1.45 !important}
+.b2b-summary > p{font-size:.9rem !important}
+.product-dl{padding:.75rem .85rem !important;gap:.5rem !important}
+.product-dl div{gap:.65rem !important;padding-top:.55rem !important}
+.application-grid{padding:.75rem .85rem !important}
+.related-section{padding:1rem !important}
+.related-grid{gap:.7rem !important}
+.related-product{padding:.85rem .9rem !important}
+
+/* Prevent large empty gaps after removed / compacted sections */
+section{padding-top:clamp(2.9rem,5vw,4.1rem);padding-bottom:clamp(2.9rem,5vw,4.1rem)}
+.quality-section + .dach-section{border-top:0}
