@@ -18,10 +18,13 @@ function initNav(){
     t.setAttribute('aria-expanded',open?'true':'false');
     document.documentElement.classList.toggle('nav-open',!!open);
   };
-  t.addEventListener('click',(e)=>{e.preventDefault();setOpen(!n.classList.contains('open'));});
+  const isMobileNav=()=>window.matchMedia('(max-width: 767px)').matches;
+  t.addEventListener('click',(e)=>{e.preventDefault();if(!isMobileNav()){setOpen(false);return;}setOpen(!n.classList.contains('open'));});
   n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
   document.addEventListener('click',e=>{if(!t.contains(e.target)&&!n.contains(e.target))setOpen(false);});
   document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false);});
+  window.addEventListener('resize',()=>{if(!isMobileNav())setOpen(false);}, {passive:true});
+  window.addEventListener('orientationchange',()=>setTimeout(()=>{if(!isMobileNav())setOpen(false);},160), {passive:true});
   window.addEventListener('scroll',()=>{if(h){h.classList.remove('header-hidden','is-hidden');h.removeAttribute('data-hidden');}}, {passive:true});
 }
 function initCookieBanner(){const b=document.getElementById('cookieBanner'),ok=document.getElementById('cookieOk');if(!b)return;if(localStorage.getItem('rmt_cookie'))return;setTimeout(()=>b.classList.add('visible'),700);ok&&ok.addEventListener('click',()=>{localStorage.setItem('rmt_cookie','essential');b.classList.remove('visible')});}

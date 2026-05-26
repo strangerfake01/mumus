@@ -2515,3 +2515,83 @@ html body .site-header[data-hidden="true"]{
     will-change:auto!important;
   }
 }
+
+
+/* Linked copy of hero background hard-fix */
+/* RMT hero background layer hard-fix — 2026-05-26
+   Keeps hero image/video behind content. No layout flow, no stacked media. */
+.hero.has-hover-media{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  display:block!important;
+  background:#071829!important;
+}
+.hero.has-hover-media > .hero-media,
+section.hero.has-hover-media > .hero-media[data-hero-hover-media="true"]{
+  position:absolute!important;
+  inset:0!important;
+  top:0!important;
+  right:0!important;
+  bottom:0!important;
+  left:0!important;
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  overflow:hidden!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  margin:0!important;
+  padding:0!important;
+  background:#071829!important;
+}
+.hero.has-hover-media > .hero-media::after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:4!important;
+  pointer-events:none!important;
+  background:
+    linear-gradient(90deg,rgba(5,18,32,.94) 0%,rgba(5,18,32,.78) 32%,rgba(5,18,32,.42) 60%,rgba(5,18,32,.58) 100%),
+    radial-gradient(circle at 20% 24%,rgba(34,211,238,.10),transparent 46%)!important;
+}
+.hero.has-hover-media > .hero-media > picture.hero-poster,
+.hero.has-hover-media > .hero-media > picture.hero-poster > img,
+.hero.has-hover-media > .hero-media > video.hero-hover-video{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  max-width:none!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:0!important;
+}
+.hero.has-hover-media > .hero-media > picture.hero-poster{z-index:1!important;opacity:1;transition:opacity .45s ease;}
+.hero.has-hover-media > .hero-media > picture.hero-poster > img,
+.hero.has-hover-media > .hero-media > video.hero-hover-video{
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+.hero.has-hover-media > .hero-media > video.hero-hover-video{z-index:2!important;opacity:0;transition:opacity .45s ease;}
+.hero.has-hover-media > .hero-pattern{position:absolute!important;z-index:2!important;pointer-events:none!important;}
+.hero.has-hover-media > .container{position:relative!important;z-index:5!important;}
+.hero.has-hover-media .hero-inner,
+.hero.has-hover-media .hero-content,
+.hero.has-hover-media .hero-visual{position:relative!important;z-index:6!important;}
+@media (hover:hover) and (pointer:fine){
+  .hero.has-hover-media:hover > .hero-media > video.hero-hover-video{opacity:.96!important;}
+  .hero.has-hover-media:hover > .hero-media > picture.hero-poster{opacity:0!important;}
+}
+.hero.has-hover-media.hero-video-active > .hero-media > video.hero-hover-video{opacity:.96!important;}
+.hero.has-hover-media.hero-video-active > .hero-media > picture.hero-poster{opacity:0!important;}
+@media(max-width:900px){
+  .hero.has-hover-media > .hero-media::after{
+    background:linear-gradient(180deg,rgba(5,18,32,.91) 0%,rgba(5,18,32,.78) 48%,rgba(5,18,32,.86) 100%)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero.has-hover-media > .hero-media > video.hero-hover-video{display:none!important;}
+  .hero.has-hover-media > .hero-media > picture.hero-poster{opacity:1!important;}
+}
