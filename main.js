@@ -1,5 +1,5 @@
 /* Raw Materials Trade Kft. — static, crawlable catalogue enhancement */
-const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyuEGCiWVvBx3BCQf9M4Gaw5sU9tRUfVHkM8GeKTWQFp_U2Sv92cKpaJA3OXi7zWc_zgg/exec';
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwDEuYKsUuQbo_Zvabk7dDuwFUwkPqlwZ28J7ML4_y4UDK2Q5FwGEpRk3jV8LX9qGdqeg/exec';
 function getLang(){const path=window.location.pathname.toLowerCase();const file=path.split('/').pop()||'';if(file==='hu.html'||file.startsWith('hu-')||file==='ai-profile-hu.html'||path.match(/\/hu\//))return'hu';if(file==='de-at.html'||file.startsWith('de-at-')||file==='ai-profile-de-at.html'||path.match(/\/de-at\//))return'de-at';return'en'}
 const FORM_TEXT={
   en:{gdpr:'Please accept the data protection consent.',disc:'Please acknowledge the product documentation disclaimer.',sending:'Sending…',sent:'Thank you — your enquiry has been sent. We will respond within 1–2 business days.',mailto:'Your email client has been opened with a pre-filled message.',fail:'The form could not be sent automatically. Your email client has been opened instead.'},
